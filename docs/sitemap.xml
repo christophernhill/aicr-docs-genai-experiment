@@ -76,4 +76,44 @@
          <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/getting-started/hardware/storage/</loc>
          <lastmod>2026-04-05</lastmod>
     </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/running-jobs/analysis/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/running-jobs/gpu-jobs/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/running-jobs/job-arrays/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/running-jobs/monitoring/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/running-jobs/slurm-basics/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/running-jobs/troubleshooting/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/software/compilers/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/software/containers/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/software/modules/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/software/python/</loc>
+         <lastmod>2026-04-05</lastmod>
+    </url>
 </urlset>
