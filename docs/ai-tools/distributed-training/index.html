@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://christophernhill.github.io/aicr-docs-genai-experiment/connecting/vscode/">
+        <link rel="canonical" href="https://christophernhill.github.io/aicr-docs-genai-experiment/ai-tools/distributed-training/">
       
       
-        <link rel="prev" href="../ondemand/">
+        <link rel="prev" href="../pytorch/">
       
       
-        <link rel="next" href="../../files/overview/">
+        <link rel="next" href="../inference/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>VS Code - AICR Docs (AI-Generated Experiment)</title>
+        <title>Distributed Training - AICR Docs (AI-Generated Experiment)</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vs-code-remote" class="md-skip">
+        <a href="#distributed-training" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VS Code
+              Distributed Training
             
           </span>
         </div>
@@ -255,13 +255,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../ssh/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../connecting/ssh/" class="md-tabs__link">
           
   
   
@@ -337,11 +335,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../ai-tools/overview/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../overview/" class="md-tabs__link">
           
   
   
@@ -844,31 +844,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -886,7 +883,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -904,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ssh/" class="md-nav__link">
+      <a href="../../connecting/ssh/" class="md-nav__link">
         
   
   
@@ -932,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ondemand/" class="md-nav__link">
+      <a href="../../connecting/ondemand/" class="md-nav__link">
         
   
   
@@ -957,37 +954,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    VS Code
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../connecting/vscode/" class="md-nav__link">
         
   
   
@@ -1003,137 +973,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Setup
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-install-vs-code-and-remote-ssh" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Install VS Code and Remote-SSH
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-configure-your-ssh-connection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Configure Your SSH Connection
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-connect-to-aicr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Connect to AICR
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-on-compute-nodes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Working on Compute Nodes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working on Compute Nodes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-connect-vs-code-to-an-interactive-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 1: Connect VS Code to an Interactive Job
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jupyter-in-vs-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jupyter in VS Code
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Troubleshooting
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        See Also
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1725,28 +1564,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
-        
-          
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -1764,7 +1606,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1782,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai-tools/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -1810,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai-tools/pytorch/" class="md-nav__link">
+      <a href="../pytorch/" class="md-nav__link">
         
   
   
@@ -1835,10 +1677,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../ai-tools/distributed-training/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Training
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1854,6 +1723,153 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#when-to-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When to Scale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision Tree
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ddp-distributed-data-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DDP (Distributed Data Parallel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fsdp-fully-sharded-data-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSDP (Fully Sharded Data Parallel)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FSDP (Fully Sharded Data Parallel)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fsdp-job-script-b200-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSDP Job Script (b200-batch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-parallelism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pipeline Parallelism
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensor-parallelism" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensor Parallelism
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Strategies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aicrs-interconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AICR's Interconnect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1866,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai-tools/inference/" class="md-nav__link">
+      <a href="../inference/" class="md-nav__link">
         
   
   
@@ -1894,7 +1910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai-tools/huggingface/" class="md-nav__link">
+      <a href="../huggingface/" class="md-nav__link">
         
   
   
@@ -1922,7 +1938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai-tools/jax/" class="md-nav__link">
+      <a href="../jax/" class="md-nav__link">
         
   
   
@@ -1950,7 +1966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai-tools/r-ml/" class="md-nav__link">
+      <a href="../r-ml/" class="md-nav__link">
         
   
   
@@ -1978,7 +1994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai-tools/julia-sciml/" class="md-nav__link">
+      <a href="../julia-sciml/" class="md-nav__link">
         
   
   
@@ -2006,7 +2022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai-tools/experiment-tracking/" class="md-nav__link">
+      <a href="../experiment-tracking/" class="md-nav__link">
         
   
   
@@ -2034,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ai-tools/large-datasets/" class="md-nav__link">
+      <a href="../large-datasets/" class="md-nav__link">
         
   
   
@@ -2116,44 +2132,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setup" class="md-nav__link">
+  <a href="#when-to-scale" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Setup
+        When to Scale
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Setup">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decision Tree
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ddp-distributed-data-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DDP (Distributed Data Parallel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fsdp-fully-sharded-data-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FSDP (Fully Sharded Data Parallel)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FSDP (Fully Sharded Data Parallel)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-install-vs-code-and-remote-ssh" class="md-nav__link">
+  <a href="#fsdp-job-script-b200-batch" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Install VS Code and Remote-SSH
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-configure-your-ssh-connection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Configure Your SSH Connection
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-connect-to-aicr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Connect to AICR
+        FSDP Job Script (b200-batch)
       
     </span>
   </a>
@@ -2166,38 +2193,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#working-on-compute-nodes" class="md-nav__link">
+  <a href="#pipeline-parallelism" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Working on Compute Nodes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Working on Compute Nodes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#option-1-connect-vs-code-to-an-interactive-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Option 1: Connect VS Code to an Interactive Job
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#jupyter-in-vs-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Jupyter in VS Code
+        Pipeline Parallelism
       
     </span>
   </a>
@@ -2205,10 +2204,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#troubleshooting" class="md-nav__link">
+  <a href="#tensor-parallelism" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Troubleshooting
+        Tensor Parallelism
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strategy-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strategy Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#combining-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Strategies
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aicrs-interconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AICR's Interconnect
       
     </span>
   </a>
@@ -2247,132 +2279,261 @@
       
       
       
-        <a href="../../tags/#tag:development" class="md-tag">Development</a>
+        <a href="../../tags/#tag:aiml" class="md-tag">AI/ML</a>
       
     
       
       
       
       
-        <a href="../../tags/#tag:getting-started" class="md-tag">Getting Started</a>
+        <a href="../../tags/#tag:ddp" class="md-tag">DDP</a>
       
     
       
       
       
       
-        <a href="../../tags/#tag:ssh" class="md-tag">SSH</a>
+        <a href="../../tags/#tag:fsdp" class="md-tag">FSDP</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:gpu" class="md-tag">GPU</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:multi-node" class="md-tag">Multi-Node</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:pytorch" class="md-tag">PyTorch</a>
       
     
   </nav>
 
 
 
-<h1 id="vs-code-remote">VS Code Remote<a class="headerlink" href="#vs-code-remote" title="Permanent link">&para;</a></h1>
-<p>Visual Studio Code with the Remote-SSH extension lets you edit files, run terminals, and debug code on AICR directly from your local IDE. Your code runs on the cluster; the VS Code interface runs on your laptop.</p>
-<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
-<h3 id="1-install-vs-code-and-remote-ssh">1. Install VS Code and Remote-SSH<a class="headerlink" href="#1-install-vs-code-and-remote-ssh" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Install <a href="https://code.visualstudio.com/">Visual Studio Code</a> if you don't already have it.</li>
-<li>Open VS Code and go to the Extensions panel (Ctrl+Shift+X / Cmd+Shift+X).</li>
-<li>Search for <strong>Remote - SSH</strong> and install the extension by Microsoft.</li>
-</ol>
-<h3 id="2-configure-your-ssh-connection">2. Configure Your SSH Connection<a class="headerlink" href="#2-configure-your-ssh-connection" title="Permanent link">&para;</a></h3>
-<p>Add AICR to your SSH config file. Open <code>~/.ssh/config</code> (create it if it doesn't exist) and add:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Host aicr
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    HostName login.aicr.ai
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    User USERNAME
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    IdentityFile ~/.ssh/id_ed25519_aicr
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    CertificateFile ~/.ssh/id_ed25519_aicr-cert.pub
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ServerAliveInterval 60
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    ServerAliveCountMax 3
-</span></code></pre></div>
-<!-- TODO: verify login.aicr.ai is the user-facing hostname -->
-
-<p>The <code>IdentityFile</code> and <code>CertificateFile</code> point to the SSH certificate files you received when your account was created. <code>ServerAliveInterval</code> prevents VS Code from disconnecting during idle periods.</p>
-<p>Replace <code>USERNAME</code> with your AICR username.</p>
-<h3 id="3-connect-to-aicr">3. Connect to AICR<a class="headerlink" href="#3-connect-to-aicr" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Open the Command Palette (Ctrl+Shift+P / Cmd+Shift+P).</li>
-<li>Type <strong>Remote-SSH: Connect to Host</strong> and select it.</li>
-<li>Choose <strong>aicr</strong> from the list (or type <code>USERNAME@login.aicr.ai</code>).</li>
-<li>VS Code will open a new window connected to the login node.</li>
-</ol>
-<p>You can now open folders, edit files, and use the integrated terminal — all running on AICR.</p>
-<h2 id="working-on-compute-nodes">Working on Compute Nodes<a class="headerlink" href="#working-on-compute-nodes" title="Permanent link">&para;</a></h2>
-<p>The initial connection lands you on a login node, which has limited resources (4 CPU cores, 8 GB memory). For development that needs a GPU or more resources, request a compute node first:</p>
-<h3 id="option-1-connect-vs-code-to-an-interactive-job">Option 1: Connect VS Code to an Interactive Job<a class="headerlink" href="#option-1-connect-vs-code-to-an-interactive-job" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Open a terminal in VS Code (connected to the login node).</li>
-<li>
-<p>Request an interactive session:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>salloc<span class="w"> </span>--partition<span class="o">=</span>rtx-devel<span class="w"> </span>--gpus<span class="o">=</span><span class="m">1</span><span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">4</span><span class="w"> </span>--mem<span class="o">=</span>16G<span class="w"> </span>--time<span class="o">=</span><span class="m">02</span>:00:00<span class="w"> </span>--account<span class="o">=</span>ACCOUNT_NAME
-</span></code></pre></div>
-</li>
-<li>
-<p>Note the compute node name from the output (e.g., <code>a0018</code>).</p>
-</li>
-<li>
-<p>Add the compute node to your SSH config with a <code>ProxyJump</code> through the login node:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Host aicr-compute
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    HostName NODE_NAME
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    User USERNAME
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    ProxyJump aicr
-</span></code></pre></div>
-<p>Replace <code>NODE_NAME</code> with the actual node (e.g., <code>a0018</code>).</p>
-</li>
-<li>
-<p>In VS Code, use <strong>Remote-SSH: Connect to Host</strong> and select <strong>aicr-compute</strong>.</p>
-</li>
-</ol>
+<h1 id="distributed-training">Distributed Training<a class="headerlink" href="#distributed-training" title="Permanent link">&para;</a></h1>
+<p>When a single GPU is not enough -- because your model does not fit in memory or training takes too long -- you need to distribute work across multiple GPUs or nodes. This page helps you choose the right parallelism strategy and provides job scripts for each approach on AICR.</p>
+<p>For PyTorch-specific launch commands (<code>torchrun</code>, process group setup), see <a href="../pytorch/">PyTorch on AICR</a>. For GPU hardware and NCCL details, see <a href="../gpu/multi-gpu.md">Multi-GPU Computing</a>.</p>
+<h2 id="when-to-scale">When to Scale<a class="headerlink" href="#when-to-scale" title="Permanent link">&para;</a></h2>
+<p>Consider distributed training when:</p>
+<ul>
+<li><strong>Training is too slow on one GPU.</strong> A single epoch takes hours, and you have many epochs to run. Distributing across GPUs gives near-linear speedup with DDP.</li>
+<li><strong>The model does not fit in one GPU's memory.</strong> Even after reducing batch size and enabling mixed precision, the model parameters, gradients, and optimizer states exceed GPU memory.</li>
+<li><strong>The dataset is very large.</strong> Parallel data loading and processing across multiple GPUs accelerates time-to-solution.</li>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can also run VS Code inside an OnDemand Remote Desktop (XFCE) session — launch a Remote Desktop from the Interactive Apps menu, then open VS Code from within the desktop environment.</p>
+<p>Before scaling, make sure you have optimized single-GPU performance first: enable mixed precision (<code>torch.amp</code>), use <code>torch.compile</code>, and tune your <code>DataLoader</code>. See <a href="../pytorch/#performance-tips">PyTorch performance tips</a>.</p>
 </div>
-<h2 id="jupyter-in-vs-code">Jupyter in VS Code<a class="headerlink" href="#jupyter-in-vs-code" title="Permanent link">&para;</a></h2>
-<p>VS Code has built-in Jupyter notebook support:</p>
-<ol>
-<li>Install the <strong>Jupyter</strong> extension in VS Code.</li>
-<li>Connect to AICR via Remote-SSH.</li>
-<li>Open or create a <code>.ipynb</code> file.</li>
-<li>Select a Python kernel (from a module or Conda environment on the cluster).</li>
-</ol>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>For GPU-accelerated notebooks, connect VS Code to a compute node (Option 1 above) rather than running on the login node.</p>
-</div>
-<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h2 id="decision-tree">Decision Tree<a class="headerlink" href="#decision-tree" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart TD
+    Start["Model to train"] --&gt; Fits{"Model fits on&lt;br/&gt;one GPU?"}
+    Fits -- Yes --&gt; Speed{"Need faster&lt;br/&gt;training?"}
+    Speed -- Yes --&gt; DDP["Use DDP"]
+    Speed -- No --&gt; Single["Single GPU is fine"]
+    Fits -- No --&gt; Size{"Fits when sharded&lt;br/&gt;across GPUs?"}
+    Size -- Yes --&gt; FSDP["Use FSDP"]
+    Size -- No --&gt; Pipeline["Pipeline + Tensor&lt;br/&gt;Parallelism"]</code></pre>
 <table>
 <thead>
 <tr>
-<th>Problem</th>
-<th>Solution</th>
+<th>Situation</th>
+<th>Strategy</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>"Could not establish connection"</td>
-<td>Check that <code>ssh aicr</code> works in a regular terminal first. Fix any SSH key issues before trying VS Code.</td>
+<td>Model fits on one GPU, want faster training</td>
+<td><strong>DDP</strong> -- replicate model, split data</td>
 </tr>
 <tr>
-<td>Extensions not installing on remote</td>
-<td>VS Code installs extensions on the remote host. If <code>/home/USERNAME</code> is full, clear space — extensions install to <code>~/.vscode-server/</code>.</td>
+<td>Model fits on one GPU, want to train on more data</td>
+<td><strong>DDP</strong> -- same approach</td>
 </tr>
 <tr>
-<td>Slow file browsing</td>
-<td>Large directories with many files can be slow over SSH. Close unused editor tabs and avoid opening very large directories in the Explorer panel.</td>
+<td>Model does not fit on one GPU</td>
+<td><strong>FSDP</strong> -- shard model across GPUs</td>
 </tr>
 <tr>
-<td>Connection drops after idle</td>
-<td>Add <code>ServerAliveInterval 60</code> to your SSH config (see above).</td>
+<td>Very large model (tens of billions of parameters)</td>
+<td><strong>Pipeline or Tensor Parallelism</strong></td>
 </tr>
 </tbody>
 </table>
+<h2 id="ddp-distributed-data-parallel">DDP (Distributed Data Parallel)<a class="headerlink" href="#ddp-distributed-data-parallel" title="Permanent link">&para;</a></h2>
+<p>The most common and simplest approach. Each GPU holds a complete copy of the model and processes a different shard of the data. Gradients are averaged (all-reduced) across GPUs after each backward pass.</p>
+<p><strong>When to use:</strong> The model fits in a single GPU's memory. You want to speed up training by processing more data in parallel.</p>
+<p><strong>Key properties:</strong></p>
+<ul>
+<li>Near-linear scaling up to dozens of GPUs</li>
+<li>Each GPU needs enough memory for the full model, a batch of data, gradients, and optimizer states</li>
+<li>Communication cost is one all-reduce per backward pass</li>
+</ul>
+<p>For DDP job scripts (single-node and multi-node), see <a href="../pytorch/#multi-gpu-training-single-node">PyTorch on AICR</a>. The key commands are:</p>
+<ul>
+<li><strong>Single node</strong>: <code>torchrun --nproc_per_node=8 train.py</code></li>
+<li><strong>Multi-node</strong>: <code>srun torchrun --nnodes=$SLURM_NNODES --nproc_per_node=8 ... train.py</code></li>
+</ul>
+<p>Your training script must wrap the model in <code>torch.nn.parallel.DistributedDataParallel</code>. See the <a href="../recipes/pytorch-training.md">PyTorch Training recipe</a> for a complete working example.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>AICR's NDR400 InfiniBand interconnect (400 Gb/s) keeps inter-node gradient synchronization fast. NCCL uses this automatically when available.</p>
+</div>
+<h2 id="fsdp-fully-sharded-data-parallel">FSDP (Fully Sharded Data Parallel)<a class="headerlink" href="#fsdp-fully-sharded-data-parallel" title="Permanent link">&para;</a></h2>
+<p>FSDP shards model parameters, gradients, and optimizer states across GPUs. Each GPU only holds a fraction of the model. During forward and backward passes, parameters are gathered on-the-fly and released after use.</p>
+<p><strong>When to use:</strong> Your model does not fit on a single GPU, but it fits when sharded across the available GPUs.</p>
+<p><strong>Key properties:</strong></p>
+<ul>
+<li>Dramatically reduces per-GPU memory usage</li>
+<li>Allows training models that are 4--8x larger than what one GPU can hold</li>
+<li>Higher communication overhead than DDP (all-gather + reduce-scatter per layer)</li>
+</ul>
+<h3 id="fsdp-job-script-b200-batch">FSDP Job Script (b200-batch)<a class="headerlink" href="#fsdp-job-script-b200-batch" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#SBATCH --job-name=fsdp_training</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">#SBATCH --nodes=2</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">#SBATCH --ntasks-per-node=1</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">#SBATCH --gpus-per-node=8</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">#SBATCH --cpus-per-task=64</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">#SBATCH --mem=0</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">#SBATCH --time=24:00:00</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>module<span class="w"> </span>purge
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nb">source</span><span class="w"> </span>~/pytorch-env/bin/activate
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nb">export</span><span class="w"> </span><span class="nv">MASTER_ADDR</span><span class="o">=</span><span class="k">$(</span>scontrol<span class="w"> </span>show<span class="w"> </span>hostnames<span class="w"> </span><span class="nv">$SLURM_JOB_NODELIST</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">1</span><span class="k">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nb">export</span><span class="w"> </span><span class="nv">MASTER_PORT</span><span class="o">=</span><span class="m">29500</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>srun<span class="w"> </span>torchrun<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span>--nnodes<span class="o">=</span><span class="nv">$SLURM_NNODES</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span>--nproc_per_node<span class="o">=</span><span class="m">8</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span>--rdzv_id<span class="o">=</span><span class="nv">$SLURM_JOB_ID</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span>--rdzv_backend<span class="o">=</span>c10d<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span>--rdzv_endpoint<span class="o">=</span><span class="nv">$MASTER_ADDR</span>:<span class="nv">$MASTER_PORT</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span>train_fsdp.py
+</span></code></pre></div>
+<p>In your training script, wrap the model with FSDP:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.fsdp</span><span class="w"> </span><span class="kn">import</span> <span class="n">FullyShardedDataParallel</span> <span class="k">as</span> <span class="n">FSDP</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.fsdp</span><span class="w"> </span><span class="kn">import</span> <span class="n">ShardingStrategy</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">model</span> <span class="o">=</span> <span class="n">FSDP</span><span class="p">(</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">model</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">sharding_strategy</span><span class="o">=</span><span class="n">ShardingStrategy</span><span class="o">.</span><span class="n">FULL_SHARD</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">use_orig_params</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">)</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">FSDP + mixed precision</p>
+<p>Combine FSDP with BF16 mixed precision for best memory efficiency on B200 GPUs:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">torch.distributed.fsdp</span><span class="w"> </span><span class="kn">import</span> <span class="n">MixedPrecision</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">bf16_policy</span> <span class="o">=</span> <span class="n">MixedPrecision</span><span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">param_dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">reduce_dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">buffer_dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">model</span> <span class="o">=</span> <span class="n">FSDP</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">mixed_precision</span><span class="o">=</span><span class="n">bf16_policy</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<h2 id="pipeline-parallelism">Pipeline Parallelism<a class="headerlink" href="#pipeline-parallelism" title="Permanent link">&para;</a></h2>
+<p><strong>Pipeline parallelism</strong> splits the model into sequential stages, with each stage assigned to a different GPU (or group of GPUs). Data flows through the stages in a pipeline, so multiple micro-batches are in flight simultaneously.</p>
+<p><strong>When to use:</strong> Very large sequential models (e.g., deep Transformers) where FSDP alone is not sufficient, or when you want to overlap computation across stages.</p>
+<p><strong>Key properties:</strong></p>
+<ul>
+<li>Requires splitting the model into roughly equal stages</li>
+<li>Pipeline bubbles reduce efficiency; more micro-batches reduce bubble overhead</li>
+<li>Often combined with DDP or FSDP within each stage</li>
+</ul>
+<p>PyTorch provides <code>torch.distributed.pipelining</code> for pipeline parallelism. This is an advanced technique; consult the <a href="https://pytorch.org/docs/stable/distributed.pipelining.html">PyTorch pipeline parallelism documentation</a> for implementation details.</p>
+<h2 id="tensor-parallelism">Tensor Parallelism<a class="headerlink" href="#tensor-parallelism" title="Permanent link">&para;</a></h2>
+<p><strong>Tensor parallelism</strong> splits individual layers (e.g., large linear layers in Transformers) across GPUs. Each GPU computes part of each layer and synchronizes at layer boundaries.</p>
+<p><strong>When to use:</strong> Single layers are too large for one GPU's memory, or you are working with very wide Transformer models.</p>
+<p><strong>Key properties:</strong></p>
+<ul>
+<li>Requires very high-bandwidth GPU-to-GPU communication (works best within a single node via NVLink)</li>
+<li>Typically combined with pipeline parallelism across nodes and DDP for data parallelism</li>
+<li>Libraries like Megatron-LM and DeepSpeed implement this automatically</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Tensor parallelism across nodes (over InfiniBand rather than NVLink) incurs significant latency. Prefer tensor parallelism within a node and pipeline parallelism across nodes.</p>
+</div>
+<h2 id="strategy-summary">Strategy Summary<a class="headerlink" href="#strategy-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Model Fits on 1 GPU?</th>
+<th>Communication</th>
+<th>Complexity</th>
+<th>Scaling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DDP</td>
+<td>Yes</td>
+<td>All-reduce (gradients)</td>
+<td>Low</td>
+<td>Near-linear</td>
+</tr>
+<tr>
+<td>FSDP</td>
+<td>Sharded, yes</td>
+<td>All-gather + reduce-scatter</td>
+<td>Medium</td>
+<td>Good</td>
+</tr>
+<tr>
+<td>Pipeline</td>
+<td>No</td>
+<td>Point-to-point (activations)</td>
+<td>High</td>
+<td>Good with many micro-batches</td>
+</tr>
+<tr>
+<td>Tensor</td>
+<td>No (layer-level)</td>
+<td>All-reduce (partial results)</td>
+<td>High</td>
+<td>Within-node best</td>
+</tr>
+</tbody>
+</table>
+<h2 id="combining-strategies">Combining Strategies<a class="headerlink" href="#combining-strategies" title="Permanent link">&para;</a></h2>
+<p>Large-scale training often uses multiple strategies simultaneously. A common pattern:</p>
+<ul>
+<li><strong>Tensor parallelism</strong> within a node (8 GPUs connected by NVLink)</li>
+<li><strong>Pipeline parallelism</strong> across nodes (connected by InfiniBand)</li>
+<li><strong>Data parallelism</strong> (DDP) across pipeline-parallel replicas</li>
+</ul>
+<p>Libraries such as Megatron-LM, DeepSpeed, and <a href="../huggingface/">Hugging Face Accelerate</a> can orchestrate these combinations.</p>
+<h2 id="aicrs-interconnect">AICR's Interconnect<a class="headerlink" href="#aicrs-interconnect" title="Permanent link">&para;</a></h2>
+<p>AICR's B200 nodes have a dedicated compute InfiniBand fabric (NDR400, 400 Gb/s) optimized for GPU-to-GPU collective operations via NCCL. This makes multi-node distributed training fast -- gradient synchronization happens over InfiniBand rather than Ethernet.</p>
+<p>For hardware-level details, see <a href="../gpu/multi-gpu.md">Multi-GPU Computing</a>.</p>
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../ssh/">SSH</a> — basic SSH connection setup</li>
-<li><a href="../ondemand/">OnDemand Web Portal</a> — browser-based access alternative</li>
-<li><a href="../../running-jobs/slurm-basics/">Slurm Basics</a> — requesting compute resources for development</li>
+<li><a href="../pytorch/">PyTorch on AICR</a> -- <code>torchrun</code> launch commands and DDP code examples</li>
+<li><a href="../gpu/multi-gpu.md">Multi-GPU Computing</a> -- NCCL, InfiniBand, hardware-level details</li>
+<li><a href="../huggingface/">Hugging Face on AICR</a> -- using Accelerate for multi-GPU training</li>
+<li><a href="../gpu/overview.md">GPU Overview</a> -- what GPUs are available</li>
+<li><a href="../../running-jobs/gpu-jobs/">GPU Jobs</a> -- partitions and GPU resource requests</li>
+<li><a href="../inference/">Inference and Serving</a> -- multi-GPU inference (different from training)</li>
+<li><a href="../best-practices/checkpointing.md">Checkpointing Long Jobs</a> -- saving state in distributed training</li>
 </ul>
 
 
@@ -2394,7 +2555,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 5, 2026 23:07:33 UTC">April 5, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 5, 2026 23:50:50 UTC">April 5, 2026</span>
   </span>
 
     
