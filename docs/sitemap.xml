@@ -49,6 +49,22 @@
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/best-practices/checkpointing/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/best-practices/data-management/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/best-practices/reproducibility/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/best-practices/resource-usage/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
          <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/connecting/ondemand/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
@@ -137,6 +153,18 @@
          <lastmod>2026-04-06</lastmod>
     </url>
     <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/policies/about/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/policies/acceptable-use/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/policies/acknowledging-aicr/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
          <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/recipes/containers/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
@@ -210,6 +238,18 @@
     </url>
     <url>
          <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/software/python/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/support/faq/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/support/getting-help/</loc>
+         <lastmod>2026-04-06</lastmod>
+    </url>
+    <url>
+         <loc>https://christophernhill.github.io/aicr-docs-genai-experiment/support/login-troubleshooting/</loc>
          <lastmod>2026-04-06</lastmod>
     </url>
 </urlset>
