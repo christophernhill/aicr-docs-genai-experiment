@@ -378,6 +378,26 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../recipes/snapshots/" class="md-tabs__link">
+          
+  
+  
+  Recipes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
     <li class="md-tabs__item">
       <a href="../../tags/" class="md-tabs__link">
         
@@ -2327,6 +2347,319 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recipes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Recipes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/snapshots/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Snapshots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/pytorch-training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PyTorch Training
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/vllm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM with vLLM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/protein-folding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protein Folding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/image-classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Image Classification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/hyperparameter-sweeps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hyperparameter Sweeps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/dask/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dask Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/containers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../recipes/openclaw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenClaw AI Assistant
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../tags/" class="md-nav__link">
         
@@ -2653,7 +2986,7 @@
 <p class="admonition-title">Note</p>
 <p>Setting <code>--mem=0</code> requests all available memory on the node, which is typical for exclusive multi-GPU jobs.</p>
 </div>
-<p>Your training script must initialize the process group and wrap the model in <code>DistributedDataParallel</code>. See the <a href="https://github.com/mit-orcd/aicr-doc-boot/blob/main/draft-material/train.py">train.py example</a> in the aicr-doc-boot repository, or the <a href="../recipes/pytorch-training.md">PyTorch Training recipe</a> for a complete walkthrough.</p>
+<p>Your training script must initialize the process group and wrap the model in <code>DistributedDataParallel</code>. See the <a href="https://github.com/mit-orcd/aicr-doc-boot/blob/main/draft-material/train.py">train.py example</a> in the aicr-doc-boot repository, or the <a href="../../recipes/pytorch-training/">PyTorch Training recipe</a> for a complete walkthrough.</p>
 <h2 id="multi-node-training">Multi-Node Training<a class="headerlink" href="#multi-node-training" title="Permanent link">&para;</a></h2>
 <p>For training across multiple nodes, combine <code>srun</code> with <code>torchrun</code>. This launches <code>torchrun</code> on each node via Slurm, and the processes coordinate through NCCL over InfiniBand:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="ch">#!/bin/bash</span>
@@ -2767,7 +3100,7 @@
 <tr>
 <td>ESMFold / OpenFold</td>
 <td>Protein structure prediction</td>
-<td>See <a href="../recipes/protein-folding.md">Protein Folding recipe</a></td>
+<td>See <a href="../../recipes/protein-folding/">Protein Folding recipe</a></td>
 </tr>
 <tr>
 <td>torchtext</td>
@@ -2786,7 +3119,7 @@
 <ul>
 <li><a href="../distributed-training/">Distributed Training</a> -- when and how to scale beyond one GPU</li>
 <li><a href="../../gpu/multi-gpu/">Multi-GPU Computing</a> -- NCCL and hardware communication</li>
-<li><a href="../recipes/pytorch-training.md">Training a PyTorch Model</a> -- end-to-end recipe</li>
+<li><a href="../../recipes/pytorch-training/">Training a PyTorch Model</a> -- end-to-end recipe</li>
 <li><a href="../../running-jobs/gpu-jobs/">GPU Jobs</a> -- requesting GPUs in Slurm</li>
 <li><a href="../../software/python/">Python and Conda</a> -- environment management</li>
 <li><a href="../../software/containers/">Containers (Apptainer)</a> -- using pre-built PyTorch containers</li>

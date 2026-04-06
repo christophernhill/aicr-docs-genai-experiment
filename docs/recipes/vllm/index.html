@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://christophernhill.github.io/aicr-docs-genai-experiment/running-jobs/gpu-jobs/">
+        <link rel="canonical" href="https://christophernhill.github.io/aicr-docs-genai-experiment/recipes/vllm/">
       
       
-        <link rel="prev" href="../slurm-basics/">
+        <link rel="prev" href="../pytorch-training/">
       
       
-        <link rel="next" href="../analysis/">
+        <link rel="next" href="../protein-folding/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>GPU Jobs - AICR Docs (AI-Generated Experiment)</title>
+        <title>LLM with vLLM - AICR Docs (AI-Generated Experiment)</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gpu-jobs" class="md-skip">
+        <a href="#running-an-llm-with-vllm" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GPU Jobs
+              LLM with vLLM
             
           </span>
         </div>
@@ -295,13 +295,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../slurm-basics/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../running-jobs/slurm-basics/" class="md-tabs__link">
           
   
   
@@ -377,11 +375,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../recipes/snapshots/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../snapshots/" class="md-tabs__link">
           
   
   
@@ -1202,31 +1202,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1244,7 +1241,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1262,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slurm-basics/" class="md-nav__link">
+      <a href="../../running-jobs/slurm-basics/" class="md-nav__link">
         
   
   
@@ -1287,37 +1284,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GPU Jobs
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../running-jobs/gpu-jobs/" class="md-nav__link">
         
   
   
@@ -1333,103 +1303,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#choosing-a-partition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Choosing a Partition
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requesting-gpus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requesting GPUs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#single-gpu-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Single-GPU Job
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multi-gpu-job-single-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multi-GPU Job (Single Node)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifying-gpu-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verifying GPU Access
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gpu-memory-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPU Memory Considerations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        See Also
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1442,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analysis/" class="md-nav__link">
+      <a href="../../running-jobs/analysis/" class="md-nav__link">
         
   
   
@@ -1470,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-arrays/" class="md-nav__link">
+      <a href="../../running-jobs/job-arrays/" class="md-nav__link">
         
   
   
@@ -1498,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monitoring/" class="md-nav__link">
+      <a href="../../running-jobs/monitoring/" class="md-nav__link">
         
   
   
@@ -1526,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../running-jobs/troubleshooting/" class="md-nav__link">
         
   
   
@@ -2273,28 +2146,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
   
@@ -2312,7 +2188,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2330,7 +2206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/snapshots/" class="md-nav__link">
+      <a href="../snapshots/" class="md-nav__link">
         
   
   
@@ -2358,7 +2234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/pytorch-training/" class="md-nav__link">
+      <a href="../pytorch-training/" class="md-nav__link">
         
   
   
@@ -2383,10 +2259,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../recipes/vllm/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM with vLLM
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2402,6 +2305,153 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pull-the-vllm-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Pull the vLLM Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-the-hugging-face-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Configure the Hugging Face Cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-write-the-batch-inference-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Write the Batch Inference Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-submit-the-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Submit the Job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expected Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2414,7 +2464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/protein-folding/" class="md-nav__link">
+      <a href="../protein-folding/" class="md-nav__link">
         
   
   
@@ -2442,7 +2492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/image-classification/" class="md-nav__link">
+      <a href="../image-classification/" class="md-nav__link">
         
   
   
@@ -2470,7 +2520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/hyperparameter-sweeps/" class="md-nav__link">
+      <a href="../hyperparameter-sweeps/" class="md-nav__link">
         
   
   
@@ -2498,7 +2548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/dask/" class="md-nav__link">
+      <a href="../dask/" class="md-nav__link">
         
   
   
@@ -2526,7 +2576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/containers/" class="md-nav__link">
+      <a href="../containers/" class="md-nav__link">
         
   
   
@@ -2554,7 +2604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/openclaw/" class="md-nav__link">
+      <a href="../openclaw/" class="md-nav__link">
         
   
   
@@ -2636,10 +2686,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choosing-a-partition" class="md-nav__link">
+  <a href="#goal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Choosing a Partition
+        Goal
       
     </span>
   </a>
@@ -2647,10 +2697,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-gpus" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Requesting GPUs
+        Prerequisites
       
     </span>
   </a>
@@ -2658,10 +2708,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#single-gpu-job" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Single-GPU Job
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pull-the-vllm-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Pull the vLLM Container
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-the-hugging-face-cache" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Configure the Hugging Face Cache
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-write-the-batch-inference-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Write the Batch Inference Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-submit-the-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Submit the Job
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job Script
       
     </span>
   </a>
@@ -2669,10 +2780,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-gpu-job-single-node" class="md-nav__link">
+  <a href="#expected-output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multi-GPU Job (Single Node)
+        Expected Output
       
     </span>
   </a>
@@ -2680,21 +2791,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-gpu-access" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifying GPU Access
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gpu-memory-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPU Memory Considerations
+        Troubleshooting
       
     </span>
   </a>
@@ -2733,6 +2833,13 @@
       
       
       
+        <a href="../../tags/#tag:containers" class="md-tag">Containers</a>
+      
+    
+      
+      
+      
+      
         <a href="../../tags/#tag:gpu" class="md-tag">GPU</a>
       
     
@@ -2740,142 +2847,215 @@
       
       
       
-        <a href="../../tags/#tag:running-jobs" class="md-tag">Running Jobs</a>
+        <a href="../../tags/#tag:llm" class="md-tag">LLM</a>
       
     
       
       
       
       
-        <a href="../../tags/#tag:slurm" class="md-tag">Slurm</a>
+        <a href="../../tags/#tag:recipes" class="md-tag">Recipes</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:vllm" class="md-tag">vLLM</a>
       
     
   </nav>
 
 
 
-<h1 id="gpu-jobs">GPU Jobs<a class="headerlink" href="#gpu-jobs" title="Permanent link">&para;</a></h1>
-<p>AICR's primary resource is its GPUs. This page covers how to request GPUs, choose the right partition, and submit GPU jobs. For GPU hardware details, see <a href="../../gpu/overview/">GPU Overview</a>.</p>
-<h2 id="choosing-a-partition">Choosing a Partition<a class="headerlink" href="#choosing-a-partition" title="Permanent link">&para;</a></h2>
+<h1 id="running-an-llm-with-vllm">Running an LLM with vLLM<a class="headerlink" href="#running-an-llm-with-vllm" title="Permanent link">&para;</a></h1>
+<p>Run large language model inference on AICR using vLLM with tensor parallelism across multiple GPUs.</p>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>Pull the vLLM container, write a batch inference script, and run a 70B-parameter model across 4 B200 GPUs using tensor parallelism (<code>tensor_parallel_size=4</code>).</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>An AICR account with a valid Slurm account (<code>--account=ACCOUNT_NAME</code>)</li>
+<li>A Hugging Face account with access to the model (some models require accepting a license agreement on <a href="https://huggingface.co/">huggingface.co</a>)</li>
+<li>Sufficient GPU memory for your model (see <a href="../../ai-tools/inference/">Inference and Serving</a> for sizing)</li>
+</ul>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<h3 id="1-pull-the-vllm-container">1. Pull the vLLM Container<a class="headerlink" href="#1-pull-the-vllm-container" title="Permanent link">&para;</a></h3>
+<p>Containers are large (10+ GB). Pull on a compute node to avoid burdening login nodes:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>salloc<span class="w"> </span>--partition<span class="o">=</span>cpu<span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">4</span><span class="w"> </span>--mem<span class="o">=</span>32G<span class="w"> </span>--time<span class="o">=</span><span class="m">01</span>:00:00<span class="w"> </span>--account<span class="o">=</span>ACCOUNT_NAME
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/scratch/<span class="nv">$USER</span>/containers
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$<span class="w"> </span>apptainer<span class="w"> </span>pull<span class="w"> </span>/scratch/<span class="nv">$USER</span>/containers/vllm.sif<span class="w"> </span>docker://vllm/vllm-openai:latest
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>$<span class="w"> </span><span class="nb">exit</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Store <code>.sif</code> files on <code>/scratch/$USER/containers/</code>. They are easy to rebuild if purged.</p>
+</div>
+<h3 id="2-configure-the-hugging-face-cache">2. Configure the Hugging Face Cache<a class="headerlink" href="#2-configure-the-hugging-face-cache" title="Permanent link">&para;</a></h3>
+<p>Redirect the Hugging Face cache to scratch so model downloads do not fill your home quota:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export HF_HOME=/scratch/$USER/.cache/huggingface&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</span></code></pre></div>
+<p>Set up your access token for gated models (e.g., Llama):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/scratch/<span class="nv">$USER</span>/.cache/huggingface
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;YOUR_HF_TOKEN&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>/scratch/<span class="nv">$USER</span>/.cache/huggingface/token
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$<span class="w"> </span>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>/scratch/<span class="nv">$USER</span>/.cache/huggingface/token
+</span></code></pre></div>
+<h3 id="3-write-the-batch-inference-script">3. Write the Batch Inference Script<a class="headerlink" href="#3-write-the-batch-inference-script" title="Permanent link">&para;</a></h3>
+<p>Create <code>/scratch/$USER/vllm-demo/batch_inference.py</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="sd">&quot;&quot;&quot;Batch inference with vLLM using tensor parallelism.&quot;&quot;&quot;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">vllm</span><span class="w"> </span><span class="kn">import</span> <span class="n">LLM</span><span class="p">,</span> <span class="n">SamplingParams</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="n">output_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expandvars</span><span class="p">(</span><span class="s2">&quot;/scratch/$USER/vllm-demo/results&quot;</span><span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">llm</span> <span class="o">=</span> <span class="n">LLM</span><span class="p">(</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;meta-llama/Llama-3.1-70B-Instruct&quot;</span><span class="p">,</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="n">tensor_parallel_size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;bfloat16&quot;</span><span class="p">,</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">)</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="n">sampling_params</span> <span class="o">=</span> <span class="n">SamplingParams</span><span class="p">(</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="n">max_tokens</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="n">top_p</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">)</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="n">prompts</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    <span class="s2">&quot;Explain the significance of attention mechanisms in transformers.&quot;</span><span class="p">,</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    <span class="s2">&quot;What are the main challenges in protein structure prediction?&quot;</span><span class="p">,</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    <span class="s2">&quot;Summarize the key ideas behind reinforcement learning from human feedback.&quot;</span><span class="p">,</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    <span class="s2">&quot;Describe three applications of large language models in scientific research.&quot;</span><span class="p">,</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="p">]</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="n">outputs</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">prompts</span><span class="p">,</span> <span class="n">sampling_params</span><span class="p">)</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="k">for</span> <span class="n">output</span> <span class="ow">in</span> <span class="n">outputs</span><span class="p">:</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>    <span class="n">result</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>        <span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="n">output</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>        <span class="s2">&quot;generated_text&quot;</span><span class="p">:</span> <span class="n">output</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">,</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>    <span class="p">}</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>    <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Prompt: </span><span class="si">{</span><span class="n">output</span><span class="o">.</span><span class="n">prompt</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Output: </span><span class="si">{</span><span class="n">output</span><span class="o">.</span><span class="n">outputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">[:</span><span class="mi">200</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-3-40"><a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+</span><span id="__span-3-41"><a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>
+</span><span id="__span-3-42"><a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="n">output_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s2">&quot;results.json&quot;</span><span class="p">)</span>
+</span><span id="__span-3-43"><a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span><span id="__span-3-44"><a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-3-45"><a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>
+</span><span id="__span-3-46"><a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Results saved to </span><span class="si">{</span><span class="n">output_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="4-submit-the-job">4. Submit the Job<a class="headerlink" href="#4-submit-the-job" title="Permanent link">&para;</a></h3>
+<p>Create <code>vllm_job.sh</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">#SBATCH --job-name=vllm-batch</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">#SBATCH --nodes=1</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">#SBATCH --gpus-per-node=4</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="c1">#SBATCH --cpus-per-task=32</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1">#SBATCH --mem=256G</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1">#SBATCH --time=04:00:00</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>module<span class="w"> </span>purge
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HF_HOME</span><span class="o">=</span>/scratch/<span class="nv">$USER</span>/.cache/huggingface
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>apptainer<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--nv<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span>--bind<span class="w"> </span>/scratch/<span class="nv">$USER</span>:/scratch/<span class="nv">$USER</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span>/scratch/<span class="nv">$USER</span>/containers/vllm.sif<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span>python<span class="w"> </span>/scratch/<span class="nv">$USER</span>/vllm-demo/batch_inference.py
+</span></code></pre></div>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>sbatch<span class="w"> </span>vllm_job.sh
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Submitted<span class="w"> </span>batch<span class="w"> </span>job<span class="w"> </span><span class="m">12345</span>
+</span></code></pre></div>
+<h2 id="job-script">Job Script<a class="headerlink" href="#job-script" title="Permanent link">&para;</a></h2>
+<p>Complete job script for reference:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">#SBATCH --job-name=vllm-batch</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">#SBATCH --nodes=1</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">#SBATCH --gpus-per-node=4</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1">#SBATCH --cpus-per-task=32</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">#SBATCH --mem=256G</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1">#SBATCH --time=04:00:00</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>module<span class="w"> </span>purge
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HF_HOME</span><span class="o">=</span>/scratch/<span class="nv">$USER</span>/.cache/huggingface
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>apptainer<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--nv<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span>--bind<span class="w"> </span>/scratch/<span class="nv">$USER</span>:/scratch/<span class="nv">$USER</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span>/scratch/<span class="nv">$USER</span>/containers/vllm.sif<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">    </span>python<span class="w"> </span>/scratch/<span class="nv">$USER</span>/vllm-demo/batch_inference.py
+</span></code></pre></div>
+<h2 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h2>
+<p>The job output file shows the generated text for each prompt:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Prompt: Explain the significance of attention mechanisms in transformers...
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Output: Attention mechanisms are a fundamental component of transformer architecture...
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>---
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Prompt: What are the main challenges in protein structure prediction?...
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Output: Protein structure prediction faces several key challenges...
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>---
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>Prompt: Summarize the key ideas behind reinforcement learning from human...
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>Output: Reinforcement learning from human feedback (RLHF) is a technique...
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>---
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>Prompt: Describe three applications of large language models in scientific...
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>Output: Large language models have found numerous applications in scientific...
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>---
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>Results saved to /scratch/USERNAME/vllm-demo/results/results.json
+</span></code></pre></div>
+<p>The full results are saved as JSON in the output directory.</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Partition</th>
-<th>GPU Model</th>
-<th>GPUs/Node</th>
-<th>Max Time</th>
-<th>Best For</th>
+<th>Problem</th>
+<th>Cause</th>
+<th>Fix</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>rtx-batch</code></td>
-<td>RTX PRO 6000</td>
-<td>8</td>
-<td>24h</td>
-<td>Production GPU workloads</td>
+<td><code>OutOfMemoryError</code> during model loading</td>
+<td>Model too large for requested GPUs</td>
+<td>Increase <code>tensor_parallel_size</code> and <code>--gpus-per-node</code> (e.g., 8 GPUs for 405B models)</td>
 </tr>
 <tr>
-<td><code>rtx-devel</code></td>
-<td>RTX PRO 6000</td>
-<td>8</td>
-<td>4h</td>
-<td>Testing and debugging</td>
+<td><code>Access to model is restricted</code></td>
+<td>Hugging Face token missing or license not accepted</td>
+<td>Accept the model license on huggingface.co and verify your token at <code>$HF_HOME/token</code></td>
 </tr>
 <tr>
-<td><code>b200-batch</code></td>
-<td>B200</td>
-<td>8</td>
-<td>24h</td>
-<td>Large-scale AI/ML training</td>
+<td>Container pull fails</td>
+<td>Login node resource limits</td>
+<td>Pull containers on a compute node via <code>salloc</code></td>
 </tr>
 <tr>
-<td><code>b200-devel</code></td>
-<td>B200</td>
-<td>8</td>
-<td>4h</td>
-<td>Testing and debugging</td>
+<td><code>NCCL error: unhandled cuda error</code></td>
+<td>GPU communication failure</td>
+<td>Ensure <code>tensor_parallel_size</code> matches <code>--gpus-per-node</code> and you are on a GPU partition</td>
+</tr>
+<tr>
+<td>Slow model loading on every run</td>
+<td>Downloading model weights each time</td>
+<td>Set <code>HF_HOME</code> to a persistent scratch location so the model is cached between runs</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use <code>devel</code> partitions for testing — they have shorter queue times. Switch to <code>batch</code> for production runs.</p>
-</div>
-<h2 id="requesting-gpus">Requesting GPUs<a class="headerlink" href="#requesting-gpus" title="Permanent link">&para;</a></h2>
-<p>The simplest way to request GPUs:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#SBATCH --gpus=1                    # one GPU (any type on the partition)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#SBATCH --gpus=4                    # four GPUs</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#SBATCH --gpus-per-node=8           # all 8 GPUs on a node</span>
-</span></code></pre></div>
-<p>To request a specific GPU type, use GRES syntax:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#SBATCH --gres=gpu:rtx6000:4    # 4 RTX PRO 6000 GPUs</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">#SBATCH --gres=gpu:b200:8       # 8 B200 GPUs</span>
-</span></code></pre></div>
-<!-- TODO: GRES type names (rtx6000, b200) are based on the gres.conf.j2 template pattern — verify against production gres.conf once deployed -->
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Match your partition to your GPU type. Use <code>rtx-batch</code>/<code>rtx-devel</code> for RTX GPUs and <code>b200-batch</code>/<code>b200-devel</code> for B200 GPUs.</p>
-</div>
-<h2 id="single-gpu-job">Single-GPU Job<a class="headerlink" href="#single-gpu-job" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">#SBATCH --job-name=single_gpu</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">#SBATCH --partition=rtx-batch</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">#SBATCH --gpus=1</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">#SBATCH --cpus-per-task=8</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">#SBATCH --mem=32G</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">#SBATCH --time=08:00:00</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>module<span class="w"> </span>purge
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>module<span class="w"> </span>load<span class="w"> </span>cuda
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>python<span class="w"> </span>train.py
-</span></code></pre></div>
-<h2 id="multi-gpu-job-single-node">Multi-GPU Job (Single Node)<a class="headerlink" href="#multi-gpu-job-single-node" title="Permanent link">&para;</a></h2>
-<p>Request multiple GPUs on one node:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">#SBATCH --job-name=multi_gpu</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#SBATCH --nodes=1</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">#SBATCH --gpus-per-node=4</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">#SBATCH --cpus-per-task=32</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">#SBATCH --mem=128G</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">#SBATCH --time=12:00:00</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>module<span class="w"> </span>purge
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>module<span class="w"> </span>load<span class="w"> </span>cuda
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>torchrun<span class="w"> </span>--nproc_per_node<span class="o">=</span><span class="m">4</span><span class="w"> </span>train.py
-</span></code></pre></div>
-<p>For multi-node GPU jobs (distributed training across nodes), see <a href="../../ai-tools/distributed-training/">Distributed Training</a> and <a href="../../gpu/multi-gpu/">Multi-GPU Computing</a>.</p>
-<h2 id="verifying-gpu-access">Verifying GPU Access<a class="headerlink" href="#verifying-gpu-access" title="Permanent link">&para;</a></h2>
-<p>Inside a running job, check that GPUs are visible:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>nvidia-smi
-</span></code></pre></div>
-<p>This shows GPU model, memory, utilization, and temperature. If no GPUs appear, verify that you requested them with <code>--gpus</code> or <code>--gres</code> and submitted to a GPU partition.</p>
-<p>For PyTorch:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">())</span>       <span class="c1"># should print True</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">())</span>       <span class="c1"># should match requested GPUs</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_name</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>   <span class="c1"># GPU model name</span>
-</span></code></pre></div>
-<h2 id="gpu-memory-considerations">GPU Memory Considerations<a class="headerlink" href="#gpu-memory-considerations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>RTX PRO 6000 and B200 GPUs each have substantial memory, but large models or large batch sizes can still cause out-of-memory (OOM) errors</li>
-<li>If you encounter OOM: reduce batch size, enable mixed precision (<code>torch.amp</code>), or use gradient checkpointing</li>
-<li>Monitor GPU memory usage with <code>nvidia-smi</code> during interactive sessions to right-size your requests</li>
-</ul>
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../gpu/overview/">GPU Overview</a> — hardware specs and architecture</li>
-<li><a href="../../gpu/multi-gpu/">Multi-GPU Computing</a> — NCCL and GPU-to-GPU communication</li>
-<li><a href="../../ai-tools/distributed-training/">Distributed Training</a> — scaling beyond one node</li>
-<li><a href="../slurm-basics/">Slurm Basics</a> — general job submission</li>
+<li><a href="../../ai-tools/inference/">Inference and Serving</a> -- vLLM reference, interactive serving, and model size guide</li>
+<li><a href="../../ai-tools/huggingface/">Hugging Face on AICR</a> -- model cache management and access tokens</li>
+<li><a href="../../software/containers/">Containers (Apptainer)</a> -- building and running containers</li>
+<li><a href="../../running-jobs/gpu-jobs/">GPU Jobs</a> -- partitions and GPU resource requests</li>
 </ul>
 
 
@@ -2897,7 +3077,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 5, 2026 23:30:17 UTC">April 5, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 6, 2026 00:02:17 UTC">April 6, 2026</span>
   </span>
 
     

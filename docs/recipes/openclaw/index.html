@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://christophernhill.github.io/aicr-docs-genai-experiment/running-jobs/gpu-jobs/">
+        <link rel="canonical" href="https://christophernhill.github.io/aicr-docs-genai-experiment/recipes/openclaw/">
       
       
-        <link rel="prev" href="../slurm-basics/">
+        <link rel="prev" href="../containers/">
       
       
-        <link rel="next" href="../analysis/">
+        <link rel="next" href="../../tags/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>GPU Jobs - AICR Docs (AI-Generated Experiment)</title>
+        <title>OpenClaw AI Assistant - AICR Docs (AI-Generated Experiment)</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gpu-jobs" class="md-skip">
+        <a href="#openclaw-ai-assistant" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GPU Jobs
+              OpenClaw AI Assistant
             
           </span>
         </div>
@@ -295,13 +295,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../slurm-basics/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../running-jobs/slurm-basics/" class="md-tabs__link">
           
   
   
@@ -377,11 +375,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../recipes/snapshots/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../snapshots/" class="md-tabs__link">
           
   
   
@@ -1202,31 +1202,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1244,7 +1241,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1262,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slurm-basics/" class="md-nav__link">
+      <a href="../../running-jobs/slurm-basics/" class="md-nav__link">
         
   
   
@@ -1287,37 +1284,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GPU Jobs
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../running-jobs/gpu-jobs/" class="md-nav__link">
         
   
   
@@ -1333,103 +1303,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#choosing-a-partition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Choosing a Partition
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requesting-gpus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requesting GPUs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#single-gpu-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Single-GPU Job
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multi-gpu-job-single-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multi-GPU Job (Single Node)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifying-gpu-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verifying GPU Access
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gpu-memory-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPU Memory Considerations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        See Also
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1442,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analysis/" class="md-nav__link">
+      <a href="../../running-jobs/analysis/" class="md-nav__link">
         
   
   
@@ -1470,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-arrays/" class="md-nav__link">
+      <a href="../../running-jobs/job-arrays/" class="md-nav__link">
         
   
   
@@ -1498,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monitoring/" class="md-nav__link">
+      <a href="../../running-jobs/monitoring/" class="md-nav__link">
         
   
   
@@ -1526,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../running-jobs/troubleshooting/" class="md-nav__link">
         
   
   
@@ -2273,28 +2146,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
   
@@ -2312,7 +2188,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2330,7 +2206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/snapshots/" class="md-nav__link">
+      <a href="../snapshots/" class="md-nav__link">
         
   
   
@@ -2358,7 +2234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/pytorch-training/" class="md-nav__link">
+      <a href="../pytorch-training/" class="md-nav__link">
         
   
   
@@ -2386,7 +2262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/vllm/" class="md-nav__link">
+      <a href="../vllm/" class="md-nav__link">
         
   
   
@@ -2414,7 +2290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/protein-folding/" class="md-nav__link">
+      <a href="../protein-folding/" class="md-nav__link">
         
   
   
@@ -2442,7 +2318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/image-classification/" class="md-nav__link">
+      <a href="../image-classification/" class="md-nav__link">
         
   
   
@@ -2470,7 +2346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/hyperparameter-sweeps/" class="md-nav__link">
+      <a href="../hyperparameter-sweeps/" class="md-nav__link">
         
   
   
@@ -2498,7 +2374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/dask/" class="md-nav__link">
+      <a href="../dask/" class="md-nav__link">
         
   
   
@@ -2526,7 +2402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/containers/" class="md-nav__link">
+      <a href="../containers/" class="md-nav__link">
         
   
   
@@ -2551,10 +2427,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../recipes/openclaw/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenClaw AI Assistant
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2570,6 +2473,247 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clone-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Clone the Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-build-and-configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Build and Configure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-activate-the-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Activate the Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-test-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Test the Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-launch-the-web-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Launch the Web Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#giving-the-agent-access-to-your-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Giving the Agent Access to Your Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-slurm-jobs-from-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submitting Slurm Jobs from the Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aicr-specific-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AICR-Specific Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AICR-Specific Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partitions-for-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partitions for OpenClaw
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-aware-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cluster-Aware Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-the-llm-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing the LLM Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating OpenClaw
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rebuilding-the-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rebuilding the Container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2636,10 +2780,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choosing-a-partition" class="md-nav__link">
+  <a href="#goal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Choosing a Partition
+        Goal
       
     </span>
   </a>
@@ -2647,10 +2791,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-gpus" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Requesting GPUs
+        Prerequisites
       
     </span>
   </a>
@@ -2658,10 +2802,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#single-gpu-job" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Single-GPU Job
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clone-the-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Clone the Repository
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-build-and-configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Build and Configure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-activate-the-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Activate the Module
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-test-the-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Test the Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-launch-the-web-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Launch the Web Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#giving-the-agent-access-to-your-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Giving the Agent Access to Your Data
       
     </span>
   </a>
@@ -2669,10 +2885,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-gpu-job-single-node" class="md-nav__link">
+  <a href="#submitting-slurm-jobs-from-the-agent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multi-GPU Job (Single Node)
+        Submitting Slurm Jobs from the Agent
       
     </span>
   </a>
@@ -2680,10 +2896,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-gpu-access" class="md-nav__link">
+  <a href="#aicr-specific-configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifying GPU Access
+        AICR-Specific Configuration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AICR-Specific Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partitions-for-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Partitions for OpenClaw
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-aware-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cluster-Aware Agent
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-the-llm-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changing the LLM Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updating-openclaw" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Updating OpenClaw
       
     </span>
   </a>
@@ -2691,10 +2957,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gpu-memory-considerations" class="md-nav__link">
+  <a href="#rebuilding-the-container" class="md-nav__link">
     <span class="md-ellipsis">
       
-        GPU Memory Considerations
+        Rebuilding the Container
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
       
     </span>
   </a>
@@ -2733,149 +3021,252 @@
       
       
       
-        <a href="../../tags/#tag:gpu" class="md-tag">GPU</a>
+        <a href="../../tags/#tag:aiml" class="md-tag">AI/ML</a>
       
     
       
       
       
       
-        <a href="../../tags/#tag:running-jobs" class="md-tag">Running Jobs</a>
+        <a href="../../tags/#tag:containers" class="md-tag">Containers</a>
       
     
       
       
       
       
-        <a href="../../tags/#tag:slurm" class="md-tag">Slurm</a>
+        <a href="../../tags/#tag:llm" class="md-tag">LLM</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:recipes" class="md-tag">Recipes</a>
       
     
   </nav>
 
 
 
-<h1 id="gpu-jobs">GPU Jobs<a class="headerlink" href="#gpu-jobs" title="Permanent link">&para;</a></h1>
-<p>AICR's primary resource is its GPUs. This page covers how to request GPUs, choose the right partition, and submit GPU jobs. For GPU hardware details, see <a href="../../gpu/overview/">GPU Overview</a>.</p>
-<h2 id="choosing-a-partition">Choosing a Partition<a class="headerlink" href="#choosing-a-partition" title="Permanent link">&para;</a></h2>
+<h1 id="openclaw-ai-assistant">OpenClaw AI Assistant<a class="headerlink" href="#openclaw-ai-assistant" title="Permanent link">&para;</a></h1>
+<p>Deploy <a href="https://github.com/openclaw/openclaw">OpenClaw</a>, an open-source AI assistant, on AICR. OpenClaw connects to cloud LLM providers (Anthropic Claude, OpenAI, Google Gemini, OpenRouter) and runs in an Apptainer container on a compute node. You interact through a web dashboard accessed via SSH tunnel.</p>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>Set up OpenClaw on AICR so you can use an AI coding assistant that has access to your files and can submit Slurm jobs on your behalf.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>An AICR account with a valid Slurm account (<code>--account=ACCOUNT_NAME</code>)</li>
+<li>An API key from at least one LLM provider (Anthropic, OpenAI, Google, or OpenRouter)</li>
+<li>SSH access to AICR (see <a href="../../connecting/ssh/">SSH</a>)</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Data Privacy</p>
+<p>OpenClaw sends prompts and file excerpts to cloud LLM APIs over HTTPS. <strong>Do not use it with sensitive, confidential, or export-controlled data.</strong> You are responsible for the actions of your agent.</p>
+</div>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<h3 id="1-clone-the-repository">1. Clone the Repository<a class="headerlink" href="#1-clone-the-repository" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>ssh<span class="w"> </span>USERNAME@login.aicr.ai
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/scratch/<span class="nv">$USER</span>/openclaw
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/scratch/<span class="nv">$USER</span>/openclaw
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/qsimeon/openclaw-engaging.git<span class="w"> </span>openclaw-aicr
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>openclaw-aicr
+</span></code></pre></div>
+<!-- TODO: verify if an AICR-specific fork of openclaw-engaging exists or if the MIT version works as-is -->
+
+<h3 id="2-build-and-configure">2. Build and Configure<a class="headerlink" href="#2-build-and-configure" title="Permanent link">&para;</a></h3>
+<p>The setup takes about 15–20 minutes. Run it as an interactive job on the <code>cpu</code> partition:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>salloc<span class="w"> </span>--partition<span class="o">=</span>cpu<span class="w"> </span>--mem<span class="o">=</span>8G<span class="w"> </span>--time<span class="o">=</span><span class="m">01</span>:00:00<span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">2</span><span class="w"> </span>--account<span class="o">=</span>ACCOUNT_NAME
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/scratch/<span class="nv">$USER</span>/openclaw/openclaw-aicr
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>$<span class="w"> </span>./apptainer/setup.sh
+</span></code></pre></div>
+<p>The setup wizard will prompt you to:</p>
+<ul>
+<li>Choose your LLM provider(s)</li>
+<li>Enter your API key(s)</li>
+<li>Configure HPC-specific settings</li>
+</ul>
+<p>You can also split this into two steps:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Build only (non-interactive)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$<span class="w"> </span>srun<span class="w"> </span>--partition<span class="o">=</span>cpu<span class="w"> </span>--mem<span class="o">=</span>8G<span class="w"> </span>--time<span class="o">=</span><span class="m">01</span>:00:00<span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">2</span><span class="w"> </span>--account<span class="o">=</span>ACCOUNT_NAME<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span>./apptainer/setup.sh<span class="w"> </span>--build-only
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Configure only (interactive)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>$<span class="w"> </span>salloc<span class="w"> </span>--partition<span class="o">=</span>cpu<span class="w"> </span>--mem<span class="o">=</span>4G<span class="w"> </span>--time<span class="o">=</span><span class="m">00</span>:30:00<span class="w"> </span>--account<span class="o">=</span>ACCOUNT_NAME
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>$<span class="w"> </span>./apptainer/setup.sh<span class="w"> </span>--onboard-only
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>$<span class="w"> </span><span class="nb">exit</span>
+</span></code></pre></div>
+<h3 id="3-activate-the-module">3. Activate the Module<a class="headerlink" href="#3-activate-the-module" title="Permanent link">&para;</a></h3>
+<p>Add the OpenClaw module to your environment (one-time setup):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;module use ~/modulefiles&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>openclaw
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>$<span class="w"> </span>openclaw<span class="w"> </span>--help
+</span></code></pre></div>
+<h3 id="4-test-the-agent">4. Test the Agent<a class="headerlink" href="#4-test-the-agent" title="Permanent link">&para;</a></h3>
+<p>Send a test message to verify everything works:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>openclaw<span class="w"> </span>agent<span class="w"> </span>--local<span class="w"> </span>--agent<span class="w"> </span>main<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Hello from AICR!&quot;</span>
+</span></code></pre></div>
+<h3 id="5-launch-the-web-dashboard">5. Launch the Web Dashboard<a class="headerlink" href="#5-launch-the-web-dashboard" title="Permanent link">&para;</a></h3>
+<p>Start the gateway as a Slurm job:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/scratch/<span class="nv">$USER</span>/openclaw/openclaw-aicr
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$<span class="w"> </span>./apptainer/start-gateway.sh
+</span></code></pre></div>
+<p>Or submit manually:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>sbatch<span class="w"> </span>apptainer/slurm-gateway.sh
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>$<span class="w"> </span>cat<span class="w"> </span>openclaw-gw-JOBID.out
+</span></code></pre></div>
+<p>The output will show the node name and port. Set up an SSH tunnel from your local machine:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$<span class="w"> </span>ssh<span class="w"> </span>-f<span class="w"> </span>-N<span class="w"> </span>-L<span class="w"> </span><span class="m">18790</span>:NODE_NAME:18790<span class="w"> </span>USERNAME@login.aicr.ai
+</span></code></pre></div>
+<p>Then open <strong>http://localhost:18790</strong> in your browser.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Replace <code>NODE_NAME</code> with the actual compute node from the job output. Find it with <code>squeue -u $USER</code>.</p>
+</div>
+<h2 id="giving-the-agent-access-to-your-data">Giving the Agent Access to Your Data<a class="headerlink" href="#giving-the-agent-access-to-your-data" title="Permanent link">&para;</a></h2>
+<p>By default, OpenClaw runs in <code>--containall</code> mode with restricted filesystem access. To let the agent read your data, bind-mount specific directories:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>$<span class="w"> </span><span class="nv">APPTAINER_BIND</span><span class="o">=</span><span class="s2">&quot;/scratch/</span><span class="nv">$USER</span><span class="s2">/my-project&quot;</span><span class="w"> </span>openclaw<span class="w"> </span>agent<span class="w"> </span>--local<span class="w"> </span>--agent<span class="w"> </span>main<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span>-m<span class="w"> </span><span class="s2">&quot;Explore the CSV files in /scratch/</span><span class="nv">$USER</span><span class="s2">/my-project/&quot;</span>
+</span></code></pre></div>
+<p>For the web dashboard with data access:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span><span class="nv">APPTAINER_BIND</span><span class="o">=</span><span class="s2">&quot;/scratch/</span><span class="nv">$USER</span><span class="s2">/my-project&quot;</span><span class="w"> </span>./apptainer/start-gateway.sh
+</span></code></pre></div>
+<h2 id="submitting-slurm-jobs-from-the-agent">Submitting Slurm Jobs from the Agent<a class="headerlink" href="#submitting-slurm-jobs-from-the-agent" title="Permanent link">&para;</a></h2>
+<p>OpenClaw can submit Slurm jobs on your behalf — for example, launching GPU training runs while the agent itself runs on a CPU node:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span><span class="nv">OPENCLAW_SLURM_BINDS</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>./apptainer/start-gateway.sh
+</span></code></pre></div>
+<p>Or in a local session:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span><span class="nv">OPENCLAW_SLURM_BINDS</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">APPTAINER_BIND</span><span class="o">=</span><span class="s2">&quot;/scratch/</span><span class="nv">$USER</span><span class="s2">/my-project&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span>openclaw<span class="w"> </span>agent<span class="w"> </span>--local<span class="w"> </span>--agent<span class="w"> </span>main<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span>-m<span class="w"> </span><span class="s2">&quot;Write a Slurm batch script to train a model on the B200 partition and submit it&quot;</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When <code>OPENCLAW_SLURM_BINDS=1</code> is set, the agent can submit jobs that run <strong>outside</strong> the container — on GPU nodes with full filesystem access. Review the agent's actions carefully.</p>
+</div>
+<h2 id="aicr-specific-configuration">AICR-Specific Configuration<a class="headerlink" href="#aicr-specific-configuration" title="Permanent link">&para;</a></h2>
+<h3 id="partitions-for-openclaw">Partitions for OpenClaw<a class="headerlink" href="#partitions-for-openclaw" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
+<th>What</th>
 <th>Partition</th>
-<th>GPU Model</th>
-<th>GPUs/Node</th>
-<th>Max Time</th>
-<th>Best For</th>
+<th>Why</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>rtx-batch</code></td>
-<td>RTX PRO 6000</td>
-<td>8</td>
-<td>24h</td>
-<td>Production GPU workloads</td>
+<td>OpenClaw gateway/agent</td>
+<td><code>cpu</code></td>
+<td>No GPU needed — the agent calls cloud APIs</td>
 </tr>
 <tr>
-<td><code>rtx-devel</code></td>
-<td>RTX PRO 6000</td>
-<td>8</td>
-<td>4h</td>
-<td>Testing and debugging</td>
+<td>GPU jobs submitted by agent</td>
+<td><code>rtx-batch</code>, <code>b200-batch</code></td>
+<td>Agent writes and submits GPU job scripts</td>
 </tr>
 <tr>
-<td><code>b200-batch</code></td>
-<td>B200</td>
-<td>8</td>
-<td>24h</td>
-<td>Large-scale AI/ML training</td>
-</tr>
-<tr>
-<td><code>b200-devel</code></td>
-<td>B200</td>
-<td>8</td>
-<td>4h</td>
-<td>Testing and debugging</td>
+<td>Interactive testing</td>
+<td><code>cpu</code> (with <code>salloc</code>)</td>
+<td>Quick tests during setup</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use <code>devel</code> partitions for testing — they have shorter queue times. Switch to <code>batch</code> for production runs.</p>
-</div>
-<h2 id="requesting-gpus">Requesting GPUs<a class="headerlink" href="#requesting-gpus" title="Permanent link">&para;</a></h2>
-<p>The simplest way to request GPUs:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#SBATCH --gpus=1                    # one GPU (any type on the partition)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#SBATCH --gpus=4                    # four GPUs</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#SBATCH --gpus-per-node=8           # all 8 GPUs on a node</span>
+<h3 id="cluster-aware-agent">Cluster-Aware Agent<a class="headerlink" href="#cluster-aware-agent" title="Permanent link">&para;</a></h3>
+<p>Initialize the agent with knowledge of AICR's partitions, storage layout, and documentation:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$<span class="w"> </span>./apptainer/orcd-workspace-init.sh
 </span></code></pre></div>
-<p>To request a specific GPU type, use GRES syntax:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#SBATCH --gres=gpu:rtx6000:4    # 4 RTX PRO 6000 GPUs</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">#SBATCH --gres=gpu:b200:8       # 8 B200 GPUs</span>
-</span></code></pre></div>
-<!-- TODO: GRES type names (rtx6000, b200) are based on the gres.conf.j2 template pattern — verify against production gres.conf once deployed -->
+<!-- TODO: verify if this workspace init script needs AICR-specific adaptation or if it works generically -->
 
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Match your partition to your GPU type. Use <code>rtx-batch</code>/<code>rtx-devel</code> for RTX GPUs and <code>b200-batch</code>/<code>b200-devel</code> for B200 GPUs.</p>
-</div>
-<h2 id="single-gpu-job">Single-GPU Job<a class="headerlink" href="#single-gpu-job" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">#SBATCH --job-name=single_gpu</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">#SBATCH --partition=rtx-batch</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">#SBATCH --gpus=1</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">#SBATCH --cpus-per-task=8</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">#SBATCH --mem=32G</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">#SBATCH --time=08:00:00</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>module<span class="w"> </span>purge
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>module<span class="w"> </span>load<span class="w"> </span>cuda
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>python<span class="w"> </span>train.py
+<h3 id="changing-the-llm-model">Changing the LLM Model<a class="headerlink" href="#changing-the-llm-model" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>$<span class="w"> </span>openclaw<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>agent.model<span class="w"> </span><span class="s2">&quot;anthropic/claude-sonnet-4-6&quot;</span>
 </span></code></pre></div>
-<h2 id="multi-gpu-job-single-node">Multi-GPU Job (Single Node)<a class="headerlink" href="#multi-gpu-job-single-node" title="Permanent link">&para;</a></h2>
-<p>Request multiple GPUs on one node:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">#SBATCH --job-name=multi_gpu</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#SBATCH --nodes=1</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">#SBATCH --gpus-per-node=4</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">#SBATCH --cpus-per-task=32</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">#SBATCH --mem=128G</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">#SBATCH --time=12:00:00</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>module<span class="w"> </span>purge
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>module<span class="w"> </span>load<span class="w"> </span>cuda
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>torchrun<span class="w"> </span>--nproc_per_node<span class="o">=</span><span class="m">4</span><span class="w"> </span>train.py
+<h2 id="updating-openclaw">Updating OpenClaw<a class="headerlink" href="#updating-openclaw" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/scratch/<span class="nv">$USER</span>/openclaw/openclaw-aicr
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>$<span class="w"> </span>./apptainer/update.sh
 </span></code></pre></div>
-<p>For multi-node GPU jobs (distributed training across nodes), see <a href="../../ai-tools/distributed-training/">Distributed Training</a> and <a href="../../gpu/multi-gpu/">Multi-GPU Computing</a>.</p>
-<h2 id="verifying-gpu-access">Verifying GPU Access<a class="headerlink" href="#verifying-gpu-access" title="Permanent link">&para;</a></h2>
-<p>Inside a running job, check that GPUs are visible:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>nvidia-smi
+<p>Check for updates without applying:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$<span class="w"> </span>./apptainer/update.sh<span class="w"> </span>--check
 </span></code></pre></div>
-<p>This shows GPU model, memory, utilization, and temperature. If no GPUs appear, verify that you requested them with <code>--gpus</code> or <code>--gres</code> and submitted to a GPU partition.</p>
-<p>For PyTorch:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">())</span>       <span class="c1"># should print True</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">())</span>       <span class="c1"># should match requested GPUs</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_name</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>   <span class="c1"># GPU model name</span>
+<h2 id="rebuilding-the-container">Rebuilding the Container<a class="headerlink" href="#rebuilding-the-container" title="Permanent link">&para;</a></h2>
+<p>If you need to rebuild from scratch:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$<span class="w"> </span>salloc<span class="w"> </span>--partition<span class="o">=</span>cpu<span class="w"> </span>--mem<span class="o">=</span>8G<span class="w"> </span>--time<span class="o">=</span><span class="m">01</span>:00:00<span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">2</span><span class="w"> </span>--account<span class="o">=</span>ACCOUNT_NAME
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>apptainer
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>$<span class="w"> </span>apptainer<span class="w"> </span>build<span class="w"> </span>apptainer/openclaw.sif<span class="w"> </span>apptainer/openclaw.def
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>$<span class="w"> </span><span class="nb">exit</span>
 </span></code></pre></div>
-<h2 id="gpu-memory-considerations">GPU Memory Considerations<a class="headerlink" href="#gpu-memory-considerations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>RTX PRO 6000 and B200 GPUs each have substantial memory, but large models or large batch sizes can still cause out-of-memory (OOM) errors</li>
-<li>If you encounter OOM: reduce batch size, enable mixed precision (<code>torch.amp</code>), or use gradient checkpointing</li>
-<li>Monitor GPU memory usage with <code>nvidia-smi</code> during interactive sessions to right-size your requests</li>
-</ul>
+<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OPENCLAW_SLURM_BINDS</code></td>
+<td>off</td>
+<td>Enable agent to submit Slurm jobs</td>
+</tr>
+<tr>
+<td><code>OPENCLAW_CONTAINALL</code></td>
+<td>on</td>
+<td>Filesystem isolation (<code>0</code> to disable)</td>
+</tr>
+<tr>
+<td><code>OPENCLAW_GATEWAY_PORT</code></td>
+<td><code>18790</code></td>
+<td>Gateway web interface port</td>
+</tr>
+<tr>
+<td><code>APPTAINER_BIND</code></td>
+<td>—</td>
+<td>Additional directories to mount in the container</td>
+</tr>
+</tbody>
+</table>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setup fails with out-of-memory</td>
+<td>Increase <code>--mem</code> in the salloc/srun command (try 12G)</td>
+</tr>
+<tr>
+<td>Cannot reach dashboard</td>
+<td>Check the SSH tunnel is running and the node name is correct</td>
+</tr>
+<tr>
+<td>Agent can't see my files</td>
+<td>Set <code>APPTAINER_BIND="/scratch/$USER/my-dir"</code> before launching</td>
+</tr>
+<tr>
+<td>Token auto-fill not working</td>
+<td>Find the token manually: <code>python3 -c "import json; print(json.load(open('.openclaw/openclaw.json'))['gateway']['auth']['token'])"</code></td>
+</tr>
+<tr>
+<td>Agent can't submit Slurm jobs</td>
+<td>Set <code>OPENCLAW_SLURM_BINDS=1</code> before launching</td>
+</tr>
+<tr>
+<td>Port already in use</td>
+<td>Kill old tunnels: <code>lsof -ti:18790 \| xargs kill -9</code> then reconnect</td>
+</tr>
+</tbody>
+</table>
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../gpu/overview/">GPU Overview</a> — hardware specs and architecture</li>
-<li><a href="../../gpu/multi-gpu/">Multi-GPU Computing</a> — NCCL and GPU-to-GPU communication</li>
-<li><a href="../../ai-tools/distributed-training/">Distributed Training</a> — scaling beyond one node</li>
-<li><a href="../slurm-basics/">Slurm Basics</a> — general job submission</li>
+<li><a href="../../software/containers/">Containers (Apptainer)</a> — container basics on AICR</li>
+<li><a href="../../connecting/ssh/">SSH</a> — SSH tunneling setup</li>
+<li><a href="../../running-jobs/slurm-basics/">Slurm Basics</a> — partitions and job submission</li>
+<li><a href="../../running-jobs/gpu-jobs/">GPU Jobs</a> — GPU partitions the agent can target</li>
 </ul>
 
 
@@ -2897,7 +3288,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 5, 2026 23:30:17 UTC">April 5, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 6, 2026 00:02:17 UTC">April 6, 2026</span>
   </span>
 
     

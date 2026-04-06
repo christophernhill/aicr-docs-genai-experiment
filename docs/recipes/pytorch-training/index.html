@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://christophernhill.github.io/aicr-docs-genai-experiment/running-jobs/gpu-jobs/">
+        <link rel="canonical" href="https://christophernhill.github.io/aicr-docs-genai-experiment/recipes/pytorch-training/">
       
       
-        <link rel="prev" href="../slurm-basics/">
+        <link rel="prev" href="../snapshots/">
       
       
-        <link rel="next" href="../analysis/">
+        <link rel="next" href="../vllm/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>GPU Jobs - AICR Docs (AI-Generated Experiment)</title>
+        <title>PyTorch Training - AICR Docs (AI-Generated Experiment)</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gpu-jobs" class="md-skip">
+        <a href="#training-a-pytorch-model" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GPU Jobs
+              PyTorch Training
             
           </span>
         </div>
@@ -295,13 +295,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../slurm-basics/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../running-jobs/slurm-basics/" class="md-tabs__link">
           
   
   
@@ -377,11 +375,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../recipes/snapshots/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../snapshots/" class="md-tabs__link">
           
   
   
@@ -1202,31 +1202,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1244,7 +1241,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1262,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slurm-basics/" class="md-nav__link">
+      <a href="../../running-jobs/slurm-basics/" class="md-nav__link">
         
   
   
@@ -1287,37 +1284,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GPU Jobs
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../running-jobs/gpu-jobs/" class="md-nav__link">
         
   
   
@@ -1333,103 +1303,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#choosing-a-partition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Choosing a Partition
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requesting-gpus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requesting GPUs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#single-gpu-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Single-GPU Job
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multi-gpu-job-single-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multi-GPU Job (Single Node)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifying-gpu-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verifying GPU Access
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gpu-memory-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPU Memory Considerations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        See Also
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1442,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analysis/" class="md-nav__link">
+      <a href="../../running-jobs/analysis/" class="md-nav__link">
         
   
   
@@ -1470,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-arrays/" class="md-nav__link">
+      <a href="../../running-jobs/job-arrays/" class="md-nav__link">
         
   
   
@@ -1498,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monitoring/" class="md-nav__link">
+      <a href="../../running-jobs/monitoring/" class="md-nav__link">
         
   
   
@@ -1526,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../running-jobs/troubleshooting/" class="md-nav__link">
         
   
   
@@ -2273,28 +2146,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
   
@@ -2312,7 +2188,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2330,7 +2206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/snapshots/" class="md-nav__link">
+      <a href="../snapshots/" class="md-nav__link">
         
   
   
@@ -2355,10 +2231,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../recipes/pytorch-training/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PyTorch Training
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2374,6 +2277,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-a-conda-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create a Conda Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-get-the-training-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Get the Training Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-single-gpu-training-on-rtx-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Single-GPU Training on rtx-batch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-multi-gpu-training-on-b200-batch-with-torchrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Multi-GPU Training on b200-batch with torchrun
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-check-results-with-sacct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Check Results with sacct
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expected Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2386,7 +2447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/vllm/" class="md-nav__link">
+      <a href="../vllm/" class="md-nav__link">
         
   
   
@@ -2414,7 +2475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/protein-folding/" class="md-nav__link">
+      <a href="../protein-folding/" class="md-nav__link">
         
   
   
@@ -2442,7 +2503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/image-classification/" class="md-nav__link">
+      <a href="../image-classification/" class="md-nav__link">
         
   
   
@@ -2470,7 +2531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/hyperparameter-sweeps/" class="md-nav__link">
+      <a href="../hyperparameter-sweeps/" class="md-nav__link">
         
   
   
@@ -2498,7 +2559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/dask/" class="md-nav__link">
+      <a href="../dask/" class="md-nav__link">
         
   
   
@@ -2526,7 +2587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/containers/" class="md-nav__link">
+      <a href="../containers/" class="md-nav__link">
         
   
   
@@ -2554,7 +2615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/openclaw/" class="md-nav__link">
+      <a href="../openclaw/" class="md-nav__link">
         
   
   
@@ -2636,10 +2697,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choosing-a-partition" class="md-nav__link">
+  <a href="#goal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Choosing a Partition
+        Goal
       
     </span>
   </a>
@@ -2647,10 +2708,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-gpus" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Requesting GPUs
+        Prerequisites
       
     </span>
   </a>
@@ -2658,10 +2719,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#single-gpu-job" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Single-GPU Job
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-create-a-conda-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Create a Conda Environment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-get-the-training-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Get the Training Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-single-gpu-training-on-rtx-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Single-GPU Training on rtx-batch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-multi-gpu-training-on-b200-batch-with-torchrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Multi-GPU Training on b200-batch with torchrun
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-check-results-with-sacct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Check Results with sacct
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job Script
       
     </span>
   </a>
@@ -2669,10 +2802,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-gpu-job-single-node" class="md-nav__link">
+  <a href="#expected-output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multi-GPU Job (Single Node)
+        Expected Output
       
     </span>
   </a>
@@ -2680,21 +2813,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-gpu-access" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifying GPU Access
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gpu-memory-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPU Memory Considerations
+        Troubleshooting
       
     </span>
   </a>
@@ -2733,6 +2855,13 @@
       
       
       
+        <a href="../../tags/#tag:ddp" class="md-tag">DDP</a>
+      
+    
+      
+      
+      
+      
         <a href="../../tags/#tag:gpu" class="md-tag">GPU</a>
       
     
@@ -2740,142 +2869,242 @@
       
       
       
-        <a href="../../tags/#tag:running-jobs" class="md-tag">Running Jobs</a>
+        <a href="../../tags/#tag:pytorch" class="md-tag">PyTorch</a>
       
     
       
       
       
       
-        <a href="../../tags/#tag:slurm" class="md-tag">Slurm</a>
+        <a href="../../tags/#tag:recipes" class="md-tag">Recipes</a>
       
     
   </nav>
 
 
 
-<h1 id="gpu-jobs">GPU Jobs<a class="headerlink" href="#gpu-jobs" title="Permanent link">&para;</a></h1>
-<p>AICR's primary resource is its GPUs. This page covers how to request GPUs, choose the right partition, and submit GPU jobs. For GPU hardware details, see <a href="../../gpu/overview/">GPU Overview</a>.</p>
-<h2 id="choosing-a-partition">Choosing a Partition<a class="headerlink" href="#choosing-a-partition" title="Permanent link">&para;</a></h2>
+<h1 id="training-a-pytorch-model">Training a PyTorch Model<a class="headerlink" href="#training-a-pytorch-model" title="Permanent link">&para;</a></h1>
+<p>End-to-end recipe for training a PyTorch model on AICR, from environment setup through single-GPU and multi-GPU training to checking results.</p>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>Train a neural network using the <code>train.py</code> example script -- first on a single GPU, then across multiple GPUs with Distributed Data Parallel (DDP).</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>An AICR account with a valid Slurm account (<code>--account=ACCOUNT_NAME</code>)</li>
+<li>SSH access to the cluster</li>
+<li>Familiarity with Python and basic Slurm concepts (<a href="../../running-jobs/slurm-basics/">Slurm Basics</a>)</li>
+</ul>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<h3 id="1-create-a-conda-environment">1. Create a Conda Environment<a class="headerlink" href="#1-create-a-conda-environment" title="Permanent link">&para;</a></h3>
+<p>Install Miniforge if you have not already (see <a href="../../software/python/">Python and Conda</a>), then create an environment on scratch to avoid filling your home quota:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--prefix<span class="w"> </span>/scratch/<span class="nv">$USER</span>/conda-envs/pytorch<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.12<span class="w"> </span>-y
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>/scratch/<span class="nv">$USER</span>/conda-envs/pytorch
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>pytorch<span class="w"> </span>torchvision<span class="w"> </span>torchaudio<span class="w"> </span>pytorch-cuda<span class="o">=</span><span class="m">12</span>.4<span class="w"> </span>-c<span class="w"> </span>pytorch<span class="w"> </span>-c<span class="w"> </span>nvidia<span class="w"> </span>-y
+</span></code></pre></div>
+<!-- TODO: verify CUDA version compatibility with AICR driver -->
+
+<p>Verify GPU support:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import torch; print(torch.cuda.is_available())&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>True
+</span></code></pre></div>
+<h3 id="2-get-the-training-script">2. Get the Training Script<a class="headerlink" href="#2-get-the-training-script" title="Permanent link">&para;</a></h3>
+<p>The <code>train.py</code> script trains a small neural network (SensorNet) on synthetic data. It supports both single-GPU and multi-GPU (DDP) modes automatically:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/scratch/<span class="nv">$USER</span>/pytorch-demo
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/scratch/<span class="nv">$USER</span>/pytorch-demo
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>$<span class="w"> </span>wget<span class="w"> </span>https://raw.githubusercontent.com/mit-orcd/aicr-doc-boot/main/draft-material/train.py
+</span></code></pre></div>
+<p>The script accepts these arguments:</p>
 <table>
 <thead>
 <tr>
-<th>Partition</th>
-<th>GPU Model</th>
-<th>GPUs/Node</th>
-<th>Max Time</th>
-<th>Best For</th>
+<th>Flag</th>
+<th>Default</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>rtx-batch</code></td>
-<td>RTX PRO 6000</td>
-<td>8</td>
-<td>24h</td>
-<td>Production GPU workloads</td>
+<td><code>--seed</code></td>
+<td>0</td>
+<td>Random seed</td>
 </tr>
 <tr>
-<td><code>rtx-devel</code></td>
-<td>RTX PRO 6000</td>
-<td>8</td>
-<td>4h</td>
-<td>Testing and debugging</td>
+<td><code>--epochs</code></td>
+<td>20</td>
+<td>Training epochs</td>
 </tr>
 <tr>
-<td><code>b200-batch</code></td>
-<td>B200</td>
-<td>8</td>
-<td>24h</td>
-<td>Large-scale AI/ML training</td>
+<td><code>--batch-size</code></td>
+<td>256</td>
+<td>Batch size per GPU</td>
 </tr>
 <tr>
-<td><code>b200-devel</code></td>
-<td>B200</td>
-<td>8</td>
-<td>4h</td>
-<td>Testing and debugging</td>
+<td><code>--lr</code></td>
+<td>1e-3</td>
+<td>Learning rate</td>
+</tr>
+<tr>
+<td><code>--output-dir</code></td>
+<td><code>.</code></td>
+<td>Directory for checkpoints</td>
+</tr>
+<tr>
+<td><code>--log-every</code></td>
+<td>5</td>
+<td>Print metrics every N epochs</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use <code>devel</code> partitions for testing — they have shorter queue times. Switch to <code>batch</code> for production runs.</p>
-</div>
-<h2 id="requesting-gpus">Requesting GPUs<a class="headerlink" href="#requesting-gpus" title="Permanent link">&para;</a></h2>
-<p>The simplest way to request GPUs:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#SBATCH --gpus=1                    # one GPU (any type on the partition)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#SBATCH --gpus=4                    # four GPUs</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#SBATCH --gpus-per-node=8           # all 8 GPUs on a node</span>
+<h3 id="3-single-gpu-training-on-rtx-batch">3. Single-GPU Training on rtx-batch<a class="headerlink" href="#3-single-gpu-training-on-rtx-batch" title="Permanent link">&para;</a></h3>
+<p>Create <code>single_gpu.sh</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">#SBATCH --job-name=pytorch-single</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">#SBATCH --partition=rtx-batch</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#SBATCH --gpus=1</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">#SBATCH --cpus-per-task=8</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">#SBATCH --mem=32G</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">#SBATCH --time=01:00:00</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>module<span class="w"> </span>purge
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>conda<span class="w"> </span>shell.bash<span class="w"> </span>hook<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>conda<span class="w"> </span>activate<span class="w"> </span>/scratch/<span class="nv">$USER</span>/conda-envs/pytorch
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>python<span class="w"> </span>train.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span>--epochs<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span>--batch-size<span class="w"> </span><span class="m">256</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span>--output-dir<span class="w"> </span>/scratch/<span class="nv">$USER</span>/pytorch-demo/results
 </span></code></pre></div>
-<p>To request a specific GPU type, use GRES syntax:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#SBATCH --gres=gpu:rtx6000:4    # 4 RTX PRO 6000 GPUs</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">#SBATCH --gres=gpu:b200:8       # 8 B200 GPUs</span>
+<p>Submit:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>sbatch<span class="w"> </span>single_gpu.sh
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Submitted<span class="w"> </span>batch<span class="w"> </span>job<span class="w"> </span><span class="m">12345</span>
 </span></code></pre></div>
-<!-- TODO: GRES type names (rtx6000, b200) are based on the gres.conf.j2 template pattern — verify against production gres.conf once deployed -->
-
+<h3 id="4-multi-gpu-training-on-b200-batch-with-torchrun">4. Multi-GPU Training on b200-batch with torchrun<a class="headerlink" href="#4-multi-gpu-training-on-b200-batch-with-torchrun" title="Permanent link">&para;</a></h3>
+<p>The same <code>train.py</code> script works with DDP -- <code>torchrun</code> sets the <code>RANK</code>, <code>LOCAL_RANK</code>, and <code>WORLD_SIZE</code> environment variables that <code>train.py</code> detects automatically. Create <code>multi_gpu.sh</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c1">#SBATCH --job-name=pytorch-multigpu</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1">#SBATCH --nodes=1</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1">#SBATCH --gpus-per-node=8</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1">#SBATCH --cpus-per-task=64</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1">#SBATCH --mem=0</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1">#SBATCH --time=01:00:00</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>module<span class="w"> </span>purge
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>conda<span class="w"> </span>shell.bash<span class="w"> </span>hook<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>conda<span class="w"> </span>activate<span class="w"> </span>/scratch/<span class="nv">$USER</span>/conda-envs/pytorch
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>torchrun<span class="w"> </span>--nproc_per_node<span class="o">=</span><span class="m">8</span><span class="w"> </span>train.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span>--epochs<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="w">    </span>--batch-size<span class="w"> </span><span class="m">256</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span>--output-dir<span class="w"> </span>/scratch/<span class="nv">$USER</span>/pytorch-demo/results
+</span></code></pre></div>
+<p>Submit:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$<span class="w"> </span>sbatch<span class="w"> </span>multi_gpu.sh
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Submitted<span class="w"> </span>batch<span class="w"> </span>job<span class="w"> </span><span class="m">12346</span>
+</span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Match your partition to your GPU type. Use <code>rtx-batch</code>/<code>rtx-devel</code> for RTX GPUs and <code>b200-batch</code>/<code>b200-devel</code> for B200 GPUs.</p>
+<p><code>--mem=0</code> requests all available memory on the node, which is standard for exclusive multi-GPU jobs. <code>torchrun</code> launches 8 processes -- one per GPU -- and coordinates them via NCCL.</p>
 </div>
-<h2 id="single-gpu-job">Single-GPU Job<a class="headerlink" href="#single-gpu-job" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">#SBATCH --job-name=single_gpu</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">#SBATCH --partition=rtx-batch</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">#SBATCH --gpus=1</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">#SBATCH --cpus-per-task=8</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">#SBATCH --mem=32G</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">#SBATCH --time=08:00:00</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>module<span class="w"> </span>purge
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>module<span class="w"> </span>load<span class="w"> </span>cuda
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>python<span class="w"> </span>train.py
+<h3 id="5-check-results-with-sacct">5. Check Results with sacct<a class="headerlink" href="#5-check-results-with-sacct" title="Permanent link">&para;</a></h3>
+<p>After the job completes, verify it succeeded and review resource usage:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$<span class="w"> </span>sacct<span class="w"> </span>-j<span class="w"> </span>JOBID<span class="w"> </span>--format<span class="o">=</span>JobID,JobName,Partition,Elapsed,State,MaxRSS,MaxVMSize
 </span></code></pre></div>
-<h2 id="multi-gpu-job-single-node">Multi-GPU Job (Single Node)<a class="headerlink" href="#multi-gpu-job-single-node" title="Permanent link">&para;</a></h2>
-<p>Request multiple GPUs on one node:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">#SBATCH --job-name=multi_gpu</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#SBATCH --nodes=1</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">#SBATCH --gpus-per-node=4</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">#SBATCH --cpus-per-task=32</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">#SBATCH --mem=128G</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">#SBATCH --time=12:00:00</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>module<span class="w"> </span>purge
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>module<span class="w"> </span>load<span class="w"> </span>cuda
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>torchrun<span class="w"> </span>--nproc_per_node<span class="o">=</span><span class="m">4</span><span class="w"> </span>train.py
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>JobID           JobName  Partition    Elapsed      State     MaxRSS  MaxVMSize
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>------------ ---------- ---------- ---------- ---------- ---------- ----------
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>12345        pytorch-s+ rtx-batch    00:03:42  COMPLETED
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>12345.batch       batch              00:03:42  COMPLETED     2048M     4096M
 </span></code></pre></div>
-<p>For multi-node GPU jobs (distributed training across nodes), see <a href="../../ai-tools/distributed-training/">Distributed Training</a> and <a href="../../gpu/multi-gpu/">Multi-GPU Computing</a>.</p>
-<h2 id="verifying-gpu-access">Verifying GPU Access<a class="headerlink" href="#verifying-gpu-access" title="Permanent link">&para;</a></h2>
-<p>Inside a running job, check that GPUs are visible:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>nvidia-smi
+<p>Check the training output:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span>cat<span class="w"> </span>pytorch-single-12345.out
 </span></code></pre></div>
-<p>This shows GPU model, memory, utilization, and temperature. If no GPUs appear, verify that you requested them with <code>--gpus</code> or <code>--gres</code> and submitted to a GPU partition.</p>
-<p>For PyTorch:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">())</span>       <span class="c1"># should print True</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">())</span>       <span class="c1"># should match requested GPUs</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_name</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>   <span class="c1"># GPU model name</span>
+<h2 id="job-script">Job Script<a class="headerlink" href="#job-script" title="Permanent link">&para;</a></h2>
+<p>The single-GPU script for quick reference:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="c1">#SBATCH --job-name=pytorch-single</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="c1">#SBATCH --partition=rtx-batch</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="c1">#SBATCH --gpus=1</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1">#SBATCH --cpus-per-task=8</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="c1">#SBATCH --mem=32G</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="c1">#SBATCH --time=01:00:00</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>module<span class="w"> </span>purge
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>conda<span class="w"> </span>shell.bash<span class="w"> </span>hook<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>conda<span class="w"> </span>activate<span class="w"> </span>/scratch/<span class="nv">$USER</span>/conda-envs/pytorch
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>python<span class="w"> </span>train.py<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">    </span>--epochs<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">    </span>--batch-size<span class="w"> </span><span class="m">256</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span>--output-dir<span class="w"> </span>/scratch/<span class="nv">$USER</span>/pytorch-demo/results
 </span></code></pre></div>
-<h2 id="gpu-memory-considerations">GPU Memory Considerations<a class="headerlink" href="#gpu-memory-considerations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>RTX PRO 6000 and B200 GPUs each have substantial memory, but large models or large batch sizes can still cause out-of-memory (OOM) errors</li>
-<li>If you encounter OOM: reduce batch size, enable mixed precision (<code>torch.amp</code>), or use gradient checkpointing</li>
-<li>Monitor GPU memory usage with <code>nvidia-smi</code> during interactive sessions to right-size your requests</li>
-</ul>
+<h2 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h2>
+<p>The training script prints loss and validation metrics every 5 epochs, then saves a checkpoint:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Device: cuda  |  World size: 1  |  Seed: 0
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Epoch   5/20  train_loss=0.2134  val_loss=0.1987  [1.2s]
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Epoch  10/20  train_loss=0.0342  val_loss=0.0298  [2.4s]
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Epoch  15/20  train_loss=0.0118  val_loss=0.0105  [3.5s]
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>Epoch  20/20  train_loss=0.0089  val_loss=0.0081  [4.7s]
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>Checkpoint saved to /scratch/USERNAME/pytorch-demo/results/checkpoint_seed0.pt
+</span></code></pre></div>
+<p>For multi-GPU runs, the output reports <code>World size: 8</code> and training completes faster due to data parallelism across GPUs.</p>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ModuleNotFoundError: No module named 'torch'</code></td>
+<td>Conda environment not activated in the job</td>
+<td>Add <code>eval "$(conda shell.bash hook)"</code> and <code>conda activate</code> before the <code>python</code> command</td>
+</tr>
+<tr>
+<td><code>RuntimeError: CUDA out of memory</code></td>
+<td>Batch size too large for the GPU</td>
+<td>Reduce <code>--batch-size</code> or enable mixed precision (see <a href="../../ai-tools/pytorch/#performance-tips">PyTorch performance tips</a>)</td>
+</tr>
+<tr>
+<td><code>NCCL error</code> in multi-GPU run</td>
+<td>Network or driver issue</td>
+<td>Ensure <code>--gpus-per-node</code> matches <code>--nproc_per_node</code> and that you are on a GPU partition</td>
+</tr>
+<tr>
+<td>Job state <code>TIMEOUT</code></td>
+<td>Wall time too short</td>
+<td>Increase <code>--time</code> in the Slurm script</td>
+</tr>
+<tr>
+<td>Job state <code>OUT_OF_MEMORY</code></td>
+<td>Insufficient system memory</td>
+<td>Increase <code>--mem</code> or use <code>--mem=0</code> for full-node jobs</td>
+</tr>
+<tr>
+<td>Job pending for a long time</td>
+<td>Partition is busy</td>
+<td>Check partition availability with <code>sinfo -p rtx-batch</code>; try <code>rtx-devel</code> for testing</td>
+</tr>
+</tbody>
+</table>
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../gpu/overview/">GPU Overview</a> — hardware specs and architecture</li>
-<li><a href="../../gpu/multi-gpu/">Multi-GPU Computing</a> — NCCL and GPU-to-GPU communication</li>
-<li><a href="../../ai-tools/distributed-training/">Distributed Training</a> — scaling beyond one node</li>
-<li><a href="../slurm-basics/">Slurm Basics</a> — general job submission</li>
+<li><a href="../../ai-tools/pytorch/">PyTorch on AICR</a> -- installation options and performance tips</li>
+<li><a href="../../ai-tools/distributed-training/">Distributed Training</a> -- DDP, FSDP, and parallelism strategies</li>
+<li><a href="../../running-jobs/gpu-jobs/">GPU Jobs</a> -- partitions and GPU resource requests</li>
+<li><a href="../../running-jobs/slurm-basics/">Slurm Basics</a> -- general job submission reference</li>
+<li><a href="../best-practices/checkpointing.md">Checkpointing Long Jobs</a> -- saving and resuming training</li>
+<li><a href="../../software/python/">Python and Conda</a> -- environment management</li>
 </ul>
 
 
@@ -2897,7 +3126,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 5, 2026 23:30:17 UTC">April 5, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 6, 2026 00:02:17 UTC">April 6, 2026</span>
   </span>
 
     

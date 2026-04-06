@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://christophernhill.github.io/aicr-docs-genai-experiment/running-jobs/gpu-jobs/">
+        <link rel="canonical" href="https://christophernhill.github.io/aicr-docs-genai-experiment/recipes/containers/">
       
       
-        <link rel="prev" href="../slurm-basics/">
+        <link rel="prev" href="../dask/">
       
       
-        <link rel="next" href="../analysis/">
+        <link rel="next" href="../openclaw/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>GPU Jobs - AICR Docs (AI-Generated Experiment)</title>
+        <title>Containers - AICR Docs (AI-Generated Experiment)</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gpu-jobs" class="md-skip">
+        <a href="#build-and-run-an-apptainer-container" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              GPU Jobs
+              Containers
             
           </span>
         </div>
@@ -295,13 +295,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../slurm-basics/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../running-jobs/slurm-basics/" class="md-tabs__link">
           
   
   
@@ -377,11 +375,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../recipes/snapshots/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../snapshots/" class="md-tabs__link">
           
   
   
@@ -1202,31 +1202,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1244,7 +1241,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1262,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../slurm-basics/" class="md-nav__link">
+      <a href="../../running-jobs/slurm-basics/" class="md-nav__link">
         
   
   
@@ -1287,37 +1284,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    GPU Jobs
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../running-jobs/gpu-jobs/" class="md-nav__link">
         
   
   
@@ -1333,103 +1303,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#choosing-a-partition" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Choosing a Partition
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requesting-gpus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Requesting GPUs
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#single-gpu-job" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Single-GPU Job
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multi-gpu-job-single-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Multi-GPU Job (Single Node)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifying-gpu-access" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Verifying GPU Access
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gpu-memory-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPU Memory Considerations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-also" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        See Also
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1442,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../analysis/" class="md-nav__link">
+      <a href="../../running-jobs/analysis/" class="md-nav__link">
         
   
   
@@ -1470,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../job-arrays/" class="md-nav__link">
+      <a href="../../running-jobs/job-arrays/" class="md-nav__link">
         
   
   
@@ -1498,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monitoring/" class="md-nav__link">
+      <a href="../../running-jobs/monitoring/" class="md-nav__link">
         
   
   
@@ -1526,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../running-jobs/troubleshooting/" class="md-nav__link">
         
   
   
@@ -2273,28 +2146,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
   
@@ -2312,7 +2188,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2330,7 +2206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/snapshots/" class="md-nav__link">
+      <a href="../snapshots/" class="md-nav__link">
         
   
   
@@ -2358,7 +2234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/pytorch-training/" class="md-nav__link">
+      <a href="../pytorch-training/" class="md-nav__link">
         
   
   
@@ -2386,7 +2262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/vllm/" class="md-nav__link">
+      <a href="../vllm/" class="md-nav__link">
         
   
   
@@ -2414,7 +2290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/protein-folding/" class="md-nav__link">
+      <a href="../protein-folding/" class="md-nav__link">
         
   
   
@@ -2442,7 +2318,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/image-classification/" class="md-nav__link">
+      <a href="../image-classification/" class="md-nav__link">
         
   
   
@@ -2470,7 +2346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/hyperparameter-sweeps/" class="md-nav__link">
+      <a href="../hyperparameter-sweeps/" class="md-nav__link">
         
   
   
@@ -2498,7 +2374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/dask/" class="md-nav__link">
+      <a href="../dask/" class="md-nav__link">
         
   
   
@@ -2523,10 +2399,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../recipes/containers/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Containers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2542,6 +2445,175 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goal
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-write-a-definition-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Write a Definition File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-build-the-container-on-a-compute-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Build the Container on a Compute Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-test-the-container-interactively" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Test the Container Interactively
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-write-the-job-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Write the Job Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-submit-the-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Submit the Job
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-gpu-with-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-GPU with Containers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job Script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Expected Output
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        See Also
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2554,7 +2626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../recipes/openclaw/" class="md-nav__link">
+      <a href="../openclaw/" class="md-nav__link">
         
   
   
@@ -2636,10 +2708,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#choosing-a-partition" class="md-nav__link">
+  <a href="#goal" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Choosing a Partition
+        Goal
       
     </span>
   </a>
@@ -2647,10 +2719,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requesting-gpus" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Requesting GPUs
+        Prerequisites
       
     </span>
   </a>
@@ -2658,10 +2730,93 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#single-gpu-job" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Single-GPU Job
+        Steps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-write-a-definition-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Write a Definition File
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-build-the-container-on-a-compute-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Build the Container on a Compute Node
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-test-the-container-interactively" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Test the Container Interactively
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-write-the-job-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Write the Job Script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-submit-the-job" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Submit the Job
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-gpu-with-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi-GPU with Containers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job Script
       
     </span>
   </a>
@@ -2669,10 +2824,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-gpu-job-single-node" class="md-nav__link">
+  <a href="#expected-output" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Multi-GPU Job (Single Node)
+        Expected Output
       
     </span>
   </a>
@@ -2680,21 +2835,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-gpu-access" class="md-nav__link">
+  <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verifying GPU Access
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gpu-memory-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        GPU Memory Considerations
+        Troubleshooting
       
     </span>
   </a>
@@ -2733,6 +2877,20 @@
       
       
       
+        <a href="../../tags/#tag:apptainer" class="md-tag">Apptainer</a>
+      
+    
+      
+      
+      
+      
+        <a href="../../tags/#tag:containers" class="md-tag">Containers</a>
+      
+    
+      
+      
+      
+      
         <a href="../../tags/#tag:gpu" class="md-tag">GPU</a>
       
     
@@ -2740,142 +2898,243 @@
       
       
       
-        <a href="../../tags/#tag:running-jobs" class="md-tag">Running Jobs</a>
-      
-    
-      
-      
-      
-      
-        <a href="../../tags/#tag:slurm" class="md-tag">Slurm</a>
+        <a href="../../tags/#tag:recipes" class="md-tag">Recipes</a>
       
     
   </nav>
 
 
 
-<h1 id="gpu-jobs">GPU Jobs<a class="headerlink" href="#gpu-jobs" title="Permanent link">&para;</a></h1>
-<p>AICR's primary resource is its GPUs. This page covers how to request GPUs, choose the right partition, and submit GPU jobs. For GPU hardware details, see <a href="../../gpu/overview/">GPU Overview</a>.</p>
-<h2 id="choosing-a-partition">Choosing a Partition<a class="headerlink" href="#choosing-a-partition" title="Permanent link">&para;</a></h2>
+<h1 id="build-and-run-an-apptainer-container">Build and Run an Apptainer Container<a class="headerlink" href="#build-and-run-an-apptainer-container" title="Permanent link">&para;</a></h1>
+<p>Package a custom software environment into an Apptainer container -- build a definition file, compile it on a compute node with <code>--fakeroot</code>, and run GPU-accelerated workloads with <code>--nv</code>.</p>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<p>Create an Apptainer container with PyTorch and custom libraries, build it on a compute node, and run a GPU job using the container.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>An AICR account with a valid Slurm account (<code>--account=ACCOUNT_NAME</code>)</li>
+<li>Familiarity with <a href="../../software/containers/">Containers (Apptainer)</a> concepts</li>
+<li>Knowledge of which Python packages and system libraries your project needs</li>
+</ul>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<h3 id="1-write-a-definition-file">1. Write a Definition File<a class="headerlink" href="#1-write-a-definition-file" title="Permanent link">&para;</a></h3>
+<p>Create the definition file at <code>/scratch/$USER/containers/pytorch_custom.def</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/scratch/<span class="nv">$USER</span>/containers
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Bootstrap: docker
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>From: pytorch/pytorch:2.6.0-cuda12.6-cudnn9-runtime
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>%labels
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    Author USERNAME
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    Description PyTorch with custom scientific libraries
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>%post
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    apt-get update &amp;&amp; apt-get install -y --no-install-recommends \
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        git \
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        wget \
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        libgl1-mesa-glx \
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        libglib2.0-0 \
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        &amp;&amp; rm -rf /var/lib/apt/lists/*
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    pip install --no-cache-dir \
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        numpy \
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        scipy \
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        pandas \
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        matplotlib \
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>        scikit-learn \
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        transformers \
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        datasets \
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>        accelerate \
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>        wandb \
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>        timm
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>%environment
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    export LC_ALL=C
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    export PYTHONDONTWRITEBYTECODE=1
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>%runscript
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>    python &quot;$@&quot;
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>%test
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>    python -c &quot;import torch; print(f&#39;PyTorch {torch.__version__}, CUDA available: {torch.cuda.is_available()}&#39;)&quot;
+</span></code></pre></div>
+<p>The sections do the following:</p>
 <table>
 <thead>
 <tr>
-<th>Partition</th>
-<th>GPU Model</th>
-<th>GPUs/Node</th>
-<th>Max Time</th>
-<th>Best For</th>
+<th>Section</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>rtx-batch</code></td>
-<td>RTX PRO 6000</td>
-<td>8</td>
-<td>24h</td>
-<td>Production GPU workloads</td>
+<td><code>Bootstrap</code> / <code>From</code></td>
+<td>Base image (PyTorch with CUDA from Docker Hub)</td>
 </tr>
 <tr>
-<td><code>rtx-devel</code></td>
-<td>RTX PRO 6000</td>
-<td>8</td>
-<td>4h</td>
-<td>Testing and debugging</td>
+<td><code>%post</code></td>
+<td>Commands run during build (install system and Python packages)</td>
 </tr>
 <tr>
-<td><code>b200-batch</code></td>
-<td>B200</td>
-<td>8</td>
-<td>24h</td>
-<td>Large-scale AI/ML training</td>
+<td><code>%environment</code></td>
+<td>Environment variables set at runtime</td>
 </tr>
 <tr>
-<td><code>b200-devel</code></td>
-<td>B200</td>
-<td>8</td>
-<td>4h</td>
-<td>Testing and debugging</td>
+<td><code>%runscript</code></td>
+<td>Default command when container is executed</td>
+</tr>
+<tr>
+<td><code>%test</code></td>
+<td>Validation command run after build completes</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use <code>devel</code> partitions for testing — they have shorter queue times. Switch to <code>batch</code> for production runs.</p>
+<h3 id="2-build-the-container-on-a-compute-node">2. Build the Container on a Compute Node<a class="headerlink" href="#2-build-the-container-on-a-compute-node" title="Permanent link">&para;</a></h3>
+<p>Container builds are CPU- and memory-intensive. Always build on a compute node, not a login node:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$<span class="w"> </span>salloc<span class="w"> </span>--partition<span class="o">=</span>cpu<span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">8</span><span class="w"> </span>--mem<span class="o">=</span>32G<span class="w"> </span>--time<span class="o">=</span><span class="m">01</span>:00:00<span class="w"> </span>--account<span class="o">=</span>ACCOUNT_NAME
+</span></code></pre></div>
+<p>Once on the compute node, build with <code>--fakeroot</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>apptainer<span class="w"> </span>build<span class="w"> </span>--fakeroot<span class="w"> </span>/scratch/<span class="nv">$USER</span>/containers/pytorch_custom.sif<span class="w"> </span>/scratch/<span class="nv">$USER</span>/containers/pytorch_custom.def
+</span></code></pre></div>
+<p>The build pulls the base Docker image, runs the <code>%post</code> commands, and produces a <code>.sif</code> file. This typically takes 5--15 minutes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Build on a compute node, not a login node. Container builds use significant CPU and memory and will be terminated on login nodes.</p>
 </div>
-<h2 id="requesting-gpus">Requesting GPUs<a class="headerlink" href="#requesting-gpus" title="Permanent link">&para;</a></h2>
-<p>The simplest way to request GPUs:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">#SBATCH --gpus=1                    # one GPU (any type on the partition)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#SBATCH --gpus=4                    # four GPUs</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#SBATCH --gpus-per-node=8           # all 8 GPUs on a node</span>
+<p>After the build completes, exit the interactive session:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span><span class="nb">exit</span>
 </span></code></pre></div>
-<p>To request a specific GPU type, use GRES syntax:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#SBATCH --gres=gpu:rtx6000:4    # 4 RTX PRO 6000 GPUs</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">#SBATCH --gres=gpu:b200:8       # 8 B200 GPUs</span>
+<h3 id="3-test-the-container-interactively">3. Test the Container Interactively<a class="headerlink" href="#3-test-the-container-interactively" title="Permanent link">&para;</a></h3>
+<p>Start an interactive GPU session and verify the container works:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$<span class="w"> </span>salloc<span class="w"> </span>--partition<span class="o">=</span>rtx-devel<span class="w"> </span>--gpus<span class="o">=</span><span class="m">1</span><span class="w"> </span>--cpus-per-task<span class="o">=</span><span class="m">4</span><span class="w"> </span>--mem<span class="o">=</span>16G<span class="w"> </span>--time<span class="o">=</span><span class="m">00</span>:30:00<span class="w"> </span>--account<span class="o">=</span>ACCOUNT_NAME
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>$<span class="w"> </span>apptainer<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--nv<span class="w"> </span>/scratch/<span class="nv">$USER</span>/containers/pytorch_custom.sif<span class="w"> </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="s2">import torch</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="s2">print(f&#39;PyTorch {torch.__version__}&#39;)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="s2">print(f&#39;CUDA available: {torch.cuda.is_available()}&#39;)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="s2">print(f&#39;GPU: {torch.cuda.get_device_name(0)}&#39;)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="s2">import transformers</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="s2">print(f&#39;Transformers {transformers.__version__}&#39;)</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="s2">&quot;</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>$<span class="w"> </span><span class="nb">exit</span>
 </span></code></pre></div>
-<!-- TODO: GRES type names (rtx6000, b200) are based on the gres.conf.j2 template pattern — verify against production gres.conf once deployed -->
-
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Match your partition to your GPU type. Use <code>rtx-batch</code>/<code>rtx-devel</code> for RTX GPUs and <code>b200-batch</code>/<code>b200-devel</code> for B200 GPUs.</p>
-</div>
-<h2 id="single-gpu-job">Single-GPU Job<a class="headerlink" href="#single-gpu-job" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">#SBATCH --job-name=single_gpu</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1">#SBATCH --partition=rtx-batch</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">#SBATCH --gpus=1</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">#SBATCH --cpus-per-task=8</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">#SBATCH --mem=32G</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">#SBATCH --time=08:00:00</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>module<span class="w"> </span>purge
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>module<span class="w"> </span>load<span class="w"> </span>cuda
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>python<span class="w"> </span>train.py
+<p>The <code>--nv</code> flag binds the host NVIDIA drivers and libraries into the container, giving your application GPU access.</p>
+<h3 id="4-write-the-job-script">4. Write the Job Script<a class="headerlink" href="#4-write-the-job-script" title="Permanent link">&para;</a></h3>
+<p>Create <code>container_job.sh</code>:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="c1">#SBATCH --job-name=container-train</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">#SBATCH --gpus=1</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1">#SBATCH --cpus-per-task=8</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1">#SBATCH --mem=32G</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="c1">#SBATCH --time=08:00:00</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>apptainer<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--nv<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span>--bind<span class="w"> </span>/scratch/<span class="nv">$USER</span>:/scratch/<span class="nv">$USER</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span>--bind<span class="w"> </span>/work/INSTITUTION:/work/INSTITUTION<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span>/scratch/<span class="nv">$USER</span>/containers/pytorch_custom.sif<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span>python<span class="w"> </span>/scratch/<span class="nv">$USER</span>/my_project/train.py<span class="w"> </span>--epochs<span class="w"> </span><span class="m">50</span>
 </span></code></pre></div>
-<h2 id="multi-gpu-job-single-node">Multi-GPU Job (Single Node)<a class="headerlink" href="#multi-gpu-job-single-node" title="Permanent link">&para;</a></h2>
-<p>Request multiple GPUs on one node:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1">#SBATCH --job-name=multi_gpu</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">#SBATCH --nodes=1</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1">#SBATCH --gpus-per-node=4</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="c1">#SBATCH --cpus-per-task=32</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1">#SBATCH --mem=128G</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="c1">#SBATCH --time=12:00:00</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>module<span class="w"> </span>purge
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>module<span class="w"> </span>load<span class="w"> </span>cuda
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>torchrun<span class="w"> </span>--nproc_per_node<span class="o">=</span><span class="m">4</span><span class="w"> </span>train.py
+<h3 id="5-submit-the-job">5. Submit the Job<a class="headerlink" href="#5-submit-the-job" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$<span class="w"> </span>sbatch<span class="w"> </span>container_job.sh
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Submitted<span class="w"> </span>batch<span class="w"> </span>job<span class="w"> </span><span class="m">12345</span>
 </span></code></pre></div>
-<p>For multi-node GPU jobs (distributed training across nodes), see <a href="../../ai-tools/distributed-training/">Distributed Training</a> and <a href="../../gpu/multi-gpu/">Multi-GPU Computing</a>.</p>
-<h2 id="verifying-gpu-access">Verifying GPU Access<a class="headerlink" href="#verifying-gpu-access" title="Permanent link">&para;</a></h2>
-<p>Inside a running job, check that GPUs are visible:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>nvidia-smi
+<h3 id="multi-gpu-with-containers">Multi-GPU with Containers<a class="headerlink" href="#multi-gpu-with-containers" title="Permanent link">&para;</a></h3>
+<p>For multi-GPU jobs, use <code>torchrun</code> inside the container:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="c1">#SBATCH --job-name=container-multigpu</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1">#SBATCH --nodes=1</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">#SBATCH --gpus-per-node=8</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="c1">#SBATCH --cpus-per-task=64</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="c1">#SBATCH --mem=0</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="c1">#SBATCH --time=12:00:00</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>apptainer<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--nv<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">    </span>--bind<span class="w"> </span>/scratch/<span class="nv">$USER</span>:/scratch/<span class="nv">$USER</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span>/scratch/<span class="nv">$USER</span>/containers/pytorch_custom.sif<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span>torchrun<span class="w"> </span>--nproc_per_node<span class="o">=</span><span class="m">8</span><span class="w"> </span>/scratch/<span class="nv">$USER</span>/my_project/train.py
 </span></code></pre></div>
-<p>This shows GPU model, memory, utilization, and temperature. If no GPUs appear, verify that you requested them with <code>--gpus</code> or <code>--gres</code> and submitted to a GPU partition.</p>
-<p>For PyTorch:</p>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">())</span>       <span class="c1"># should print True</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">())</span>       <span class="c1"># should match requested GPUs</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_name</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>   <span class="c1"># GPU model name</span>
+<h2 id="job-script">Job Script<a class="headerlink" href="#job-script" title="Permanent link">&para;</a></h2>
+<p>The single-GPU container job script for reference:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="c1">#SBATCH --job-name=container-train</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="c1">#SBATCH --partition=b200-batch</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1">#SBATCH --gpus=1</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="c1">#SBATCH --cpus-per-task=8</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1">#SBATCH --mem=32G</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1">#SBATCH --time=08:00:00</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1">#SBATCH --account=ACCOUNT_NAME</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="c1">#SBATCH --output=%x-%j.out</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>apptainer<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--nv<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span>--bind<span class="w"> </span>/scratch/<span class="nv">$USER</span>:/scratch/<span class="nv">$USER</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span>--bind<span class="w"> </span>/work/INSTITUTION:/work/INSTITUTION<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span>/scratch/<span class="nv">$USER</span>/containers/pytorch_custom.sif<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span>python<span class="w"> </span>/scratch/<span class="nv">$USER</span>/my_project/train.py<span class="w"> </span>--epochs<span class="w"> </span><span class="m">50</span>
 </span></code></pre></div>
-<h2 id="gpu-memory-considerations">GPU Memory Considerations<a class="headerlink" href="#gpu-memory-considerations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>RTX PRO 6000 and B200 GPUs each have substantial memory, but large models or large batch sizes can still cause out-of-memory (OOM) errors</li>
-<li>If you encounter OOM: reduce batch size, enable mixed precision (<code>torch.amp</code>), or use gradient checkpointing</li>
-<li>Monitor GPU memory usage with <code>nvidia-smi</code> during interactive sessions to right-size your requests</li>
-</ul>
+<h2 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h2>
+<p>A successful build produces a <code>.sif</code> file:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>$<span class="w"> </span>ls<span class="w"> </span>-lh<span class="w"> </span>/scratch/<span class="nv">$USER</span>/containers/pytorch_custom.sif
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>-rwxr-xr-x<span class="w"> </span><span class="m">1</span><span class="w"> </span>USERNAME<span class="w"> </span>GROUP<span class="w"> </span><span class="m">6</span>.2G<span class="w"> </span>Apr<span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">10</span>:30<span class="w"> </span>pytorch_custom.sif
+</span></code></pre></div>
+<p>Testing the container with <code>--nv</code> confirms GPU access:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>PyTorch 2.6.0
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>CUDA available: True
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>GPU: NVIDIA B200
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>Transformers 4.x.x
+</span></code></pre></div>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FATAL: could not use fakeroot</code></td>
+<td>fakeroot not available on login node</td>
+<td>Build on a compute node via <code>salloc</code>, not on a login node</td>
+</tr>
+<tr>
+<td>Build fails during <code>pip install</code></td>
+<td>Network timeout downloading packages</td>
+<td>Retry the build; add <code>--retries 3</code> to the <code>pip install</code> line in the definition file</td>
+</tr>
+<tr>
+<td><code>CUDA not available</code> at runtime</td>
+<td>Missing <code>--nv</code> flag</td>
+<td>Always use <code>apptainer exec --nv</code> for GPU workloads</td>
+</tr>
+<tr>
+<td><code>Permission denied</code> accessing <code>/scratch</code></td>
+<td>Directory not bound into container</td>
+<td>Add <code>--bind /scratch/$USER:/scratch/$USER</code> to the <code>apptainer exec</code> command</td>
+</tr>
+<tr>
+<td>Container is very large (&gt;15 GB)</td>
+<td>Too many packages or build artifacts</td>
+<td>Use <code>--no-cache-dir</code> with pip; clean apt caches in <code>%post</code> with <code>rm -rf /var/lib/apt/lists/*</code></td>
+</tr>
+<tr>
+<td><code>ImportError</code> for a package at runtime</td>
+<td>Package not installed during build</td>
+<td>Add it to the <code>pip install</code> line in <code>%post</code> and rebuild</td>
+</tr>
+</tbody>
+</table>
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../gpu/overview/">GPU Overview</a> — hardware specs and architecture</li>
-<li><a href="../../gpu/multi-gpu/">Multi-GPU Computing</a> — NCCL and GPU-to-GPU communication</li>
-<li><a href="../../ai-tools/distributed-training/">Distributed Training</a> — scaling beyond one node</li>
-<li><a href="../slurm-basics/">Slurm Basics</a> — general job submission</li>
+<li><a href="../../software/containers/">Containers (Apptainer)</a> -- full Apptainer reference, MPI with containers</li>
+<li><a href="../../software/python/">Python and Conda</a> -- when a Conda environment is simpler than a container</li>
+<li><a href="../../running-jobs/gpu-jobs/">GPU Jobs</a> -- partitions and GPU resource requests</li>
+<li><a href="../best-practices/reproducibility.md">Reproducibility</a> -- containers for reproducible research</li>
 </ul>
 
 
@@ -2897,7 +3156,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 5, 2026 23:30:17 UTC">April 5, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 6, 2026 00:02:17 UTC">April 6, 2026</span>
   </span>
 
     
