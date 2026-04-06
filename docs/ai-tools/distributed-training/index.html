@@ -358,6 +358,26 @@
   
   
   
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gpu/overview/" class="md-tabs__link">
+          
+  
+  
+  GPUs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
     <li class="md-tabs__item">
       <a href="../../tags/" class="md-tabs__link">
         
@@ -2084,6 +2104,207 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPUs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GPUs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpu/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPU Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpu/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpu/multi-gpu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi-GPU
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpu/profiling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Profiling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gpu/best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../tags/" class="md-nav__link">
         
@@ -2323,7 +2544,7 @@
 
 <h1 id="distributed-training">Distributed Training<a class="headerlink" href="#distributed-training" title="Permanent link">&para;</a></h1>
 <p>When a single GPU is not enough -- because your model does not fit in memory or training takes too long -- you need to distribute work across multiple GPUs or nodes. This page helps you choose the right parallelism strategy and provides job scripts for each approach on AICR.</p>
-<p>For PyTorch-specific launch commands (<code>torchrun</code>, process group setup), see <a href="../pytorch/">PyTorch on AICR</a>. For GPU hardware and NCCL details, see <a href="../gpu/multi-gpu.md">Multi-GPU Computing</a>.</p>
+<p>For PyTorch-specific launch commands (<code>torchrun</code>, process group setup), see <a href="../pytorch/">PyTorch on AICR</a>. For GPU hardware and NCCL details, see <a href="../../gpu/multi-gpu/">Multi-GPU Computing</a>.</p>
 <h2 id="when-to-scale">When to Scale<a class="headerlink" href="#when-to-scale" title="Permanent link">&para;</a></h2>
 <p>Consider distributed training when:</p>
 <ul>
@@ -2524,13 +2745,13 @@
 <p>Libraries such as Megatron-LM, DeepSpeed, and <a href="../huggingface/">Hugging Face Accelerate</a> can orchestrate these combinations.</p>
 <h2 id="aicrs-interconnect">AICR's Interconnect<a class="headerlink" href="#aicrs-interconnect" title="Permanent link">&para;</a></h2>
 <p>AICR's B200 nodes have a dedicated compute InfiniBand fabric (NDR400, 400 Gb/s) optimized for GPU-to-GPU collective operations via NCCL. This makes multi-node distributed training fast -- gradient synchronization happens over InfiniBand rather than Ethernet.</p>
-<p>For hardware-level details, see <a href="../gpu/multi-gpu.md">Multi-GPU Computing</a>.</p>
+<p>For hardware-level details, see <a href="../../gpu/multi-gpu/">Multi-GPU Computing</a>.</p>
 <h2 id="see-also">See Also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../pytorch/">PyTorch on AICR</a> -- <code>torchrun</code> launch commands and DDP code examples</li>
-<li><a href="../gpu/multi-gpu.md">Multi-GPU Computing</a> -- NCCL, InfiniBand, hardware-level details</li>
+<li><a href="../../gpu/multi-gpu/">Multi-GPU Computing</a> -- NCCL, InfiniBand, hardware-level details</li>
 <li><a href="../huggingface/">Hugging Face on AICR</a> -- using Accelerate for multi-GPU training</li>
-<li><a href="../gpu/overview.md">GPU Overview</a> -- what GPUs are available</li>
+<li><a href="../../gpu/overview/">GPU Overview</a> -- what GPUs are available</li>
 <li><a href="../../running-jobs/gpu-jobs/">GPU Jobs</a> -- partitions and GPU resource requests</li>
 <li><a href="../inference/">Inference and Serving</a> -- multi-GPU inference (different from training)</li>
 <li><a href="../best-practices/checkpointing.md">Checkpointing Long Jobs</a> -- saving state in distributed training</li>
